@@ -380,7 +380,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; letter-spacing: -0
   text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted);
   margin-top: 6px; display: block;
 }
-.quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 760px; }
 .quote {
   border: 1px solid var(--line); border-radius: var(--radius);
   background: var(--card); padding: 26px 24px;
