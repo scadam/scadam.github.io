@@ -188,7 +188,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; letter-spacing: -0
   filter: grayscale(1) contrast(1.05);
   transition: transform 0.4s ease;
 }
-.repo:hover .repo-cover { transform: scale(1.04); }
+.repo:hover .repo-cover { transform: scale(1.04); filter: grayscale(0) contrast(1); }
 .repo-body { padding: 24px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
 .repo-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .repo-head h3 {
@@ -322,4 +322,95 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; letter-spacing: -0
   .nav-links { display: none; }
   .stats { gap: 32px; }
   .site-footer { flex-direction: column; gap: 8px; }
+}
+
+/* ---------- Project / repo pages ---------- */
+.project-page { max-width: 960px; margin: 0 auto; padding: 0 24px 96px; }
+.project-hero { border-bottom: 1px solid var(--line); padding-bottom: 40px; margin-bottom: 48px; }
+.project-eyebrow {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
+  color: var(--muted); letter-spacing: 0.02em;
+}
+.project-hero h1 {
+  font-size: clamp(2.1rem, 5.5vw, 3.4rem); font-weight: 700;
+  letter-spacing: -0.035em; line-height: 1.04; margin: 14px 0 18px;
+}
+.project-lede { font-size: 1.15rem; color: var(--muted); max-width: 720px; line-height: 1.7; }
+.project-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+/* stat strip */
+.project-stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 18px; margin-bottom: 56px;
+}
+.stat-card {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--card); padding: 22px 20px;
+}
+.stat-card .stat-num {
+  font-size: 1.9rem; font-weight: 700; letter-spacing: -0.03em; display: block;
+}
+.stat-card .stat-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-top: 6px; display: block;
+}
+
+.project-section { margin-bottom: 60px; }
+.project-section > h2 {
+  font-size: 1.55rem; letter-spacing: -0.02em; margin-bottom: 10px;
+}
+.project-section > .section-intro { color: var(--muted); max-width: 720px; margin-bottom: 28px; }
+
+/* feature list */
+.feature-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;
+}
+.feature {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--card); padding: 24px;
+}
+.feature h3 { font-size: 1.02rem; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.01em; }
+.feature p { font-size: 0.92rem; color: var(--muted); }
+.feature .feature-icon {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--muted);
+  letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 12px;
+}
+
+/* screenshot gallery */
+.gallery {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px;
+}
+.gallery.gallery-wide { grid-template-columns: 1fr; }
+.shot {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; background: var(--card);
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.shot:hover {
+  transform: translateY(-4px); border-color: var(--fg);
+  box-shadow: 0 18px 40px -24px rgba(0,0,0,0.55);
+}
+.shot img { width: 100%; height: auto; display: block; border-bottom: 1px solid var(--line); }
+.shot figcaption {
+  padding: 14px 18px; font-size: 0.86rem; color: var(--muted);
+}
+.shot figcaption strong { color: var(--fg); font-weight: 600; display: block; margin-bottom: 2px; }
+
+/* scenario / narrative callout */
+.callout {
+  border-left: 2px solid var(--fg); padding: 4px 0 4px 24px; margin: 8px 0 0;
+}
+.callout p { color: var(--muted); font-size: 1.02rem; line-height: 1.75; }
+.callout p + p { margin-top: 16px; }
+
+.project-footer {
+  margin-top: 8px; padding-top: 40px; border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 16px; justify-content: space-between;
+}
+.project-footer .related { display: flex; gap: 18px; flex-wrap: wrap; }
+.project-footer .related a { font-size: 0.9rem; color: var(--muted); transition: color 0.2s; }
+.project-footer .related a:hover { color: var(--fg); }
+
+@media (max-width: 720px) {
+  .gallery { grid-template-columns: 1fr; }
 }

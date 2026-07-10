@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>digital-lawyer — AI Associate Solicitor · Scott Adams</title>
+  <meta name="description" content="A Digital Worker — an AI Associate Solicitor named Alex Morgan — built with the Microsoft Agent Framework and Agent 365 SDK. It reviews supplier agreements, produces redlines, logs risk decisions, and escalates when authority is exceeded." />
+
+  <meta property="og:title" content="digital-lawyer — AI Associate Solicitor (Agent 365 Demo)" />
+  <meta property="og:description" content="An Entra-backed digital worker that reviews contracts clause-by-clause, marks up Word documents, and bills its time — all through governed MCP servers." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://scott-adams.ai/assets/repos/digital-lawyer/activity-dashboard.png" />
+
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/22813976?s=64&v=4" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="project-page">
+    <a class="article-back" href="../index.html#work">← Selected work</a>
+
+    <header class="project-hero">
+      <span class="project-eyebrow">github.com/scadam/digital-lawyer · Agent · Foundry · Legal</span>
+      <h1>Digital Lawyer — AI Associate Solicitor</h1>
+      <p class="project-lede">
+        A Digital Worker — an AI Associate Solicitor named <strong>Alex Morgan</strong>
+        (<code>agent:A-45219</code>) — built with the Microsoft Agent Framework and the Agent 365 SDK.
+        Alex reviews supplier agreements, identifies policy deviations, produces structured redlines,
+        logs risk decisions, and escalates when approval authority is exceeded — every action recorded
+        in an immutable audit trail.
+      </p>
+      <div class="project-actions">
+        <a class="btn btn-primary" href="https://github.com/scadam/digital-lawyer" target="_blank" rel="noopener">View on GitHub ↗</a>
+        <a class="btn btn-ghost" href="#dashboard">See the dashboard</a>
+      </div>
+    </header>
+
+    <div class="project-stats">
+      <div class="stat-card"><span class="stat-num">5</span><span class="stat-label">File-backed MCP servers</span></div>
+      <div class="stat-card"><span class="stat-num">18</span><span class="stat-label">Step autonomous review</span></div>
+      <div class="stat-card"><span class="stat-num">2</span><span class="stat-label">A365 tooling servers</span></div>
+      <div class="stat-card"><span class="stat-num">0</span><span class="stat-label">API keys — MI only</span></div>
+    </div>
+
+    <section class="project-section">
+      <h2>An Entra-backed digital employee</h2>
+      <p class="section-intro">Not a traditional bot — a governed digital worker with its own identity, lifecycle and risk footprint, appearing in Teams like a person.</p>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="feature-icon">Five systems</span>
+          <h3>The systems a firm runs on</h3>
+          <p>Document management (DMS), practice management (PMS), a policy & governance store, a risk register, and time & billing — each a file-backed MCP server locally, each a thin REST wrapper (iManage, Clio, ServiceNow GRC, Elite 3E…) in production.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">Contract review</span>
+          <h3>Clause-by-clause, with escalation</h3>
+          <p>Runs a 13-step review of a supplier agreement, identifies deviations by severity, and writes a structured escalation pack when — for example — a 3× liability cap exceeds the firm's 1× policy maximum.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">Word + Mail</span>
+          <h3>Marks up documents over email</h3>
+          <p>Listens on the email channel, generates a real <code>.docx</code>, inserts tracked changes and comments via the Agent 365 Word MCP Server, and replies with findings via the Mail MCP Server — a fully autonomous 18-step workflow.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">Governance</span>
+          <h3>Managed Identity, end to end</h3>
+          <p>Authenticates to every Azure service via Managed Identity — no API keys anywhere. Every tool call is logged with actor identity, inputs, result summary and UTC timestamp in an immutable audit trail.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" id="dashboard">
+      <h2>Activity &amp; Billing dashboard</h2>
+      <p class="section-intro">A Teams-styled tab on Alex's profile — in production it sits alongside Chat, Files and Storyline, giving supervisors an at-a-glance view of the agent's work, billed time and risk decisions.</p>
+      <div class="gallery gallery-wide">
+        <figure class="shot">
+          <img src="../assets/repos/digital-lawyer/activity-dashboard.png" alt="Digital Lawyer activity and billing dashboard" loading="lazy" />
+          <figcaption><strong>Activity &amp; Billing</strong>Summary cards, billing by matter, recent activity and the risk-decision log — rendered live from the JSONL files the agent writes.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>In Alex's words</h2>
+      <div class="callout">
+        <p>"I act only within the scope of the matter assigned to me — no cross-matter access without explicit assignment. I cannot approve deviations from firm risk policy that exceed my delegated authority; anything requiring Partner approval or above triggers a structured escalation pack."</p>
+        <p>"Every tool call I make is recorded in an immutable audit trail — actor identity, tool name, parameters, result summary and UTC timestamp. I authenticate to all Azure services via Managed Identity; no API keys are used anywhere in my stack. My sponsor is Scott Adams — all escalations go to him first."</p>
+      </div>
+    </section>
+
+    <footer class="project-footer">
+      <a class="btn btn-primary" href="https://github.com/scadam/digital-lawyer" target="_blank" rel="noopener">Explore the repository on GitHub ↗</a>
+      <div class="related">
+        <a href="ess-mcp.html">→ ess-mcp</a>
+        <a href="L2Q.html">→ L2Q</a>
+        <a href="retail-mcp.html">→ retail-mcp</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

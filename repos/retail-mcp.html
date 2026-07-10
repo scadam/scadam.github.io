@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>retail-mcp — Costa Coffee Frontline AI Agent · Scott Adams</title>
+  <meta name="description" content="An MCP server that powers a Costa Coffee frontline AI assistant for baristas, shift managers, store managers and regional managers — a thinking partner, not just another mobile app." />
+
+  <meta property="og:title" content="retail-mcp — Costa Coffee Frontline AI Agent" />
+  <meta property="og:description" content="An MCP server + interactive widgets that give front-line retail staff a conversational AI thinking partner." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://scott-adams.ai/assets/repos/retail-mcp/dashboard.png" />
+
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/22813976?s=64&v=4" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="project-page">
+    <a class="article-back" href="../index.html#work">← Selected work</a>
+
+    <header class="project-hero">
+      <span class="project-eyebrow">github.com/scadam/retail-mcp · MCP Server · Retail · Front-line</span>
+      <h1>Costa Coffee Frontline AI Agent</h1>
+      <p class="project-lede">
+        An MCP server that powers a Costa Coffee frontline AI assistant for baristas, shift managers,
+        store managers and regional managers. Built with FastMCP and rendered through Jinja2 HTML
+        widgets — but the agent is more than the server. As a Copilot agent it also has native
+        SharePoint, web-search and image understanding, so it combines live data, documents and
+        photos in a single conversational flow no mobile app can replicate.
+      </p>
+      <div class="project-actions">
+        <a class="btn btn-primary" href="https://github.com/scadam/retail-mcp" target="_blank" rel="noopener">View on GitHub ↗</a>
+        <a class="btn btn-ghost" href="#gallery">See the widgets</a>
+      </div>
+    </header>
+
+    <div class="project-stats">
+      <div class="stat-card"><span class="stat-num">19</span><span class="stat-label">Tool modules</span></div>
+      <div class="stat-card"><span class="stat-num">17</span><span class="stat-label">Interactive widgets</span></div>
+      <div class="stat-card"><span class="stat-num">5</span><span class="stat-label">Stores modelled</span></div>
+      <div class="stat-card"><span class="stat-num">15</span><span class="stat-label">Demo scenes</span></div>
+    </div>
+
+    <section class="project-section">
+      <h2>Why an AI agent — not just a mobile app</h2>
+      <p class="section-intro">A mobile app gives you menus and screens. This agent gives you a thinking partner that reasons across sources.</p>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="feature-icon">Weather + footfall</span>
+          <h3>Turns signals into staffing advice</h3>
+          <p>Combines the forecast, local events and store history into specific, actionable guidance — "rain + rail chaos = lots of people sheltering with a coffee; double-check oat milk and cups."</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">Image understanding</span>
+          <h3>Reads a photo and acts</h3>
+          <p>A barista uploads a photo of the milk fridge at 8°C — the agent flags the food-safety breach, cross-references the SharePoint manual, and logs the incident in one conversational turn.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">Travel disruption</span>
+          <h3>Knows who's affected by name</h3>
+          <p>A rail strike surfaces the specific staff whose commute is hit, and recommends cover actions — not just a generic alert.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">Multi-step workflows</span>
+          <h3>Chains work in one conversation</h3>
+          <p>Stock → order → log action → notify manager. Every interactive element uses the OpenAI Apps SDK <code>sendMessage</code> API to send follow-on prompts back to Copilot.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" id="gallery">
+      <h2>The widget surface</h2>
+      <p class="section-intro">Every widget is Costa-branded, renders in a mobile-sized Copilot panel, and turns each tap into a guided follow-on prompt.</p>
+      <div class="gallery">
+        <figure class="shot">
+          <img src="../assets/repos/retail-mcp/dashboard.png" alt="Daily sales dashboard widget" loading="lazy" />
+          <figcaption><strong>Daily Dashboard</strong>Sales KPIs, hourly revenue chart and top products.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/retail-mcp/rota.png" alt="Shift rota widget" loading="lazy" />
+          <figcaption><strong>Shift Rota</strong>Weekly grid with crew avatars and "Find Cover" prompts.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/retail-mcp/stock.png" alt="Stock levels widget" loading="lazy" />
+          <figcaption><strong>Stock Levels</strong>Health doughnut, category icons and one-click stock orders.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/retail-mcp/recipe.png" alt="Recipe card widget" loading="lazy" />
+          <figcaption><strong>Recipe Card</strong>Drink image, clickable allergen cells and barista tips.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/retail-mcp/training_catalog.png" alt="Training module catalogue widget" loading="lazy" />
+          <figcaption><strong>Training Catalogue</strong>All 12 modules with search and REQUIRED badges.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/retail-mcp/training_video.png" alt="Training video player widget" loading="lazy" />
+          <figcaption><strong>Training Video Player</strong>Progress tracker with guided Copilot actions.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/retail-mcp/feedback.png" alt="Customer feedback widget" loading="lazy" />
+          <figcaption><strong>Customer Feedback</strong>NPS, star ratings and a 12-week trend chart.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/retail-mcp/regional.png" alt="Regional benchmarks widget" loading="lazy" />
+          <figcaption><strong>Regional Benchmarks</strong>Cross-store performance league table.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Sam's Wednesday morning</h2>
+      <div class="callout">
+        <p>It's 7:15am on a rainy Wednesday and there's a rail disruption on the line. Sam unlocks the store and, hands-free, asks: <em>"Morning. What do I need to know about today?"</em> — the agent runs the weather and travel tools in parallel, spots that two crew members commute from Woking, and warns of a commuter surge from 7:30am.</p>
+        <p>Over the next hours it reads a photo of an out-of-range milk fridge and logs the incident, flags oat milk running critical and drafts an emergency transfer, updates the rota to cover a late arrival, coaches a new starter through a Caramel Latte allergen question, and drafts a reply to a queue-complaint tweet — all in one continuous conversation. That's the difference between a screen and a thinking partner.</p>
+      </div>
+    </section>
+
+    <footer class="project-footer">
+      <a class="btn btn-primary" href="https://github.com/scadam/retail-mcp" target="_blank" rel="noopener">Explore the repository on GitHub ↗</a>
+      <div class="related">
+        <a href="ess-mcp.html">→ ess-mcp</a>
+        <a href="L2Q.html">→ L2Q</a>
+        <a href="digital-lawyer.html">→ digital-lawyer</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

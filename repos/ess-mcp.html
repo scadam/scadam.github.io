@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESS-MCP — Enterprise Self-Service on MCP · Scott Adams</title>
+  <meta name="description" content="Enterprise Self-Service, end-to-end on the Model Context Protocol. 7 production-grade MCP servers, a Microsoft 365 Copilot declarative agent, 5 Copilot Cowork plugins, and an autonomous Agent 365 teammate." />
+
+  <meta property="og:title" content="ESS-MCP — Enterprise Self-Service on MCP" />
+  <meta property="og:description" content="7 MCP servers · 204 tools · 76 widgets · 1 declarative agent · 5 Cowork plugins · 1 autonomous Agent 365 teammate." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://scott-adams.ai/assets/repos/ess-mcp/widget-team-dashboard.png" />
+
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/22813976?s=64&v=4" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="project-page">
+    <a class="article-back" href="../index.html#work">← Selected work</a>
+
+    <header class="project-hero">
+      <span class="project-eyebrow">github.com/scadam/ess-mcp · MCP Server · Agent 365</span>
+      <h1>ESS-MCP</h1>
+      <p class="project-lede">
+        Enterprise Self-Service, end-to-end on the Model Context Protocol — and a worked example
+        of <em>every</em> shape an AI agent can take inside the Microsoft cloud. One consistent
+        enterprise toolset, surfaced four different ways across Copilot, Cowork, and autonomous
+        agents — all governed through Agent 365.
+      </p>
+      <div class="project-actions">
+        <a class="btn btn-primary" href="https://github.com/scadam/ess-mcp" target="_blank" rel="noopener">View on GitHub ↗</a>
+        <a class="btn btn-ghost" href="#gallery">See the widgets</a>
+      </div>
+    </header>
+
+    <div class="project-stats">
+      <div class="stat-card"><span class="stat-num">7</span><span class="stat-label">MCP servers</span></div>
+      <div class="stat-card"><span class="stat-num">204</span><span class="stat-label">Actionable tools</span></div>
+      <div class="stat-card"><span class="stat-num">76</span><span class="stat-label">Interactive widgets</span></div>
+      <div class="stat-card"><span class="stat-num">5</span><span class="stat-label">Cowork plugins</span></div>
+    </div>
+
+    <section class="project-section">
+      <h2>The four pillars</h2>
+      <p class="section-intro">The same enterprise toolset — Workday, ServiceNow, Salesforce, Jira, SAP SuccessFactors, SAP Ariba and Coupa — surfaced across four agent patterns.</p>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="feature-icon">01 · MCP Servers</span>
+          <h3>Modular, actionable servers</h3>
+          <p>Single-image MCP servers for 7 enterprise platforms, each exposing tools and widgets an agent can render, edit and submit. stdio · SSE · Streamable HTTP · combined ASGI gateway, with one-command Azure Container Apps deploy.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">02 · Copilot Declarative Agent</span>
+          <h3>Employee Self Service in Copilot</h3>
+          <p>A complete declarative agent that wires all 7 MCP servers into Microsoft 365 Copilot as RemoteMCP plugins, alongside SharePoint, OneDrive and Graph Connector knowledge.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">03 · Cowork Plugins</span>
+          <h3>Five packaged Cowork plugins</h3>
+          <p>Each pairs a fleet of Agent Skills — dashboards, decks, Adaptive Cards, executive briefs — with the matching ESS-MCP server as a remote MCP connector, packaged as Teams app .zips.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">04 · Autonomous Agent 365 Teammate</span>
+          <h3>A governed digital worker</h3>
+          <p>A hosted, autonomous AI teammate with its own Microsoft Entra Agent Identity — fully integrated with Agent 365 (Entra, Purview, Defender, M365 Admin Center, Foundry), calling tools through the APIM AI Gateway with end-to-end OpenTelemetry observability.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" id="gallery">
+      <h2>The widget surface</h2>
+      <p class="section-intro">Every widget renders inline in Microsoft 365 Copilot, ChatGPT, Claude, or any MCP-aware client. Forms submit straight to MCP tool callbacks — the agent never has to compose JSON.</p>
+      <div class="gallery">
+        <figure class="shot">
+          <img src="../assets/repos/ess-mcp/widget-team-dashboard.png" alt="Workday team dashboard widget" loading="lazy" />
+          <figcaption><strong>Workday — Team Dashboard</strong>Manager view across the team's workforce data.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/ess-mcp/widget-incident-list.png" alt="ServiceNow incident list widget" loading="lazy" />
+          <figcaption><strong>ServiceNow — Incident List</strong>Live IT operations, actionable inline.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/ess-mcp/widget-crm-pipeline.png" alt="Salesforce sales pipeline widget" loading="lazy" />
+          <figcaption><strong>Salesforce — Sales Pipeline</strong>Pipeline by stage rendered as a Copilot widget.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/ess-mcp/widget-sprint-board.png" alt="Jira sprint board widget" loading="lazy" />
+          <figcaption><strong>Jira — Sprint Board</strong>Delivery status without leaving the chat.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/ess-mcp/widget-sf-employee-profile.png" alt="SAP SuccessFactors employee profile widget" loading="lazy" />
+          <figcaption><strong>SAP SuccessFactors — Employee Profile</strong>HR data surfaced as an interactive card.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/ess-mcp/widget-ariba-po-status.png" alt="SAP Ariba purchase order status widget" loading="lazy" />
+          <figcaption><strong>SAP Ariba — PO Status</strong>Procurement status, action-ready.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/ess-mcp/widget-org-chart.png" alt="Org chart widget" loading="lazy" />
+          <figcaption><strong>Org Chart</strong>Team structure rendered from live data.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/ess-mcp/widget-goals-dashboard.png" alt="Goals dashboard widget" loading="lazy" />
+          <figcaption><strong>Goals Dashboard</strong>Performance and goals at a glance.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Why it matters</h2>
+      <div class="callout">
+        <p>ESS-MCP is the reference for how one governed enterprise toolset becomes durable digital labour — not four disconnected demos. The same tools power a chat agent, a Cowork surface, and a fully autonomous teammate, and every call is identity-asserted and observable through Agent 365.</p>
+        <p>Bearer-token passthrough by default; the autonomous agent additionally fronts the gateway with the APIM AI Gateway for policy, identity-asserted token exchange, and full Purview / Defender / OpenTelemetry observability.</p>
+      </div>
+    </section>
+
+    <footer class="project-footer">
+      <a class="btn btn-primary" href="https://github.com/scadam/ess-mcp" target="_blank" rel="noopener">Explore the repository on GitHub ↗</a>
+      <div class="related">
+        <a href="L2Q.html">→ L2Q</a>
+        <a href="retail-mcp.html">→ retail-mcp</a>
+        <a href="digital-lawyer.html">→ digital-lawyer</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

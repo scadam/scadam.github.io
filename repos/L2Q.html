@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L2Q — Lead-to-Quote MCP for Salesforce · Scott Adams</title>
+  <meta name="description" content="An enterprise-grade MCP server that gives fintech sales professionals a complete Lead-to-Quote workflow without ever leaving the flow of work — powering both a Microsoft 365 Copilot declarative agent and a Copilot Cowork plugin over live Salesforce data." />
+
+  <meta property="og:title" content="L2Q — Lead-to-Quote MCP for Salesforce" />
+  <meta property="og:description" content="Microsoft 365 Copilot · FastMCP · Salesforce CRM · Streamable HTTP · Azure Container Apps." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://scott-adams.ai/assets/repos/L2Q/dashboard.png" />
+
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/22813976?s=64&v=4" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main class="project-page">
+    <a class="article-back" href="../index.html#work">← Selected work</a>
+
+    <header class="project-hero">
+      <span class="project-eyebrow">github.com/scadam/L2Q · MCP Server · Salesforce · Copilot Studio</span>
+      <h1>L2Q — Sales Assistant</h1>
+      <p class="project-lede">
+        An enterprise-grade Model Context Protocol server that gives fintech sales professionals a
+        complete <strong>Lead-to-Quote</strong> workflow without ever leaving the flow of work. Built for
+        professionals managing large, complex deals with financial-institution clients in a highly
+        regulated environment — MiFID II, GDPR, FCA.
+      </p>
+      <div class="project-actions">
+        <a class="btn btn-primary" href="https://github.com/scadam/L2Q" target="_blank" rel="noopener">View on GitHub ↗</a>
+        <a class="btn btn-ghost" href="#gallery">See the widgets</a>
+      </div>
+    </header>
+
+    <div class="project-stats">
+      <div class="stat-card"><span class="stat-num">58</span><span class="stat-label">Salesforce tools</span></div>
+      <div class="stat-card"><span class="stat-num">8</span><span class="stat-label">Copilot-branded widgets</span></div>
+      <div class="stat-card"><span class="stat-num">2</span><span class="stat-label">Copilot surfaces</span></div>
+      <div class="stat-card"><span class="stat-num">5</span><span class="stat-label">Cowork skills</span></div>
+    </div>
+
+    <section class="project-section">
+      <h2>Two surfaces, one MCP server</h2>
+      <p class="section-intro">L2Q powers both a fast chat surface and a deep co-work surface over the same live Salesforce pipeline.</p>
+      <div class="feature-grid">
+        <div class="feature">
+          <span class="feature-icon">Chat</span>
+          <h3>Copilot Declarative Agent</h3>
+          <p>Chat against your Salesforce pipeline with rich, branded HTML widgets — built with the M365 Agents Toolkit and the RemoteMCP plugin. The fast surface for lookups and quick actions.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">Cowork</span>
+          <h3>Copilot Cowork plugin</h3>
+          <p>Five co-work skills — research briefs, follow-up automation, pitch decks, meeting scheduling, pipeline review packs — that turn Salesforce signals into finished email, Word, PowerPoint and Excel artifacts.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">Auth</span>
+          <h3>Enterprise-ready auth</h3>
+          <p>Switchable Client Credentials, OAuth Bearer pass-through, or Microsoft Entra SSO — the caller's Entra JWT is validated then forwarded to Salesforce. No secrets in the widget layer.</p>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">Compliance</span>
+          <h3>Built for regulated deals</h3>
+          <p>MiFID II / GDPR / FCA compliance flags and deal-desk approval tracking are first-class tools — because complex fintech deals live and die on governance.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" id="gallery">
+      <h2>The Copilot widget surface</h2>
+      <p class="section-intro">Widgets carry the Microsoft 365 Copilot look — a light surface, the signature rainbow accent bar, Segoe UI typography — and adapt automatically to light, dark and high-contrast themes.</p>
+      <div class="gallery">
+        <figure class="shot">
+          <img src="../assets/repos/L2Q/dashboard.png" alt="L2Q sales dashboard widget" loading="lazy" />
+          <figcaption><strong>Sales Dashboard</strong>Morning briefing: pipeline, tasks and leads in one view.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/L2Q/pipeline.png" alt="L2Q pipeline summary widget" loading="lazy" />
+          <figcaption><strong>Pipeline Summary</strong>Funnel and stacked-bar view of pipeline by stage.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/L2Q/account_360.png" alt="L2Q account 360 widget" loading="lazy" />
+          <figcaption><strong>Account 360</strong>Contacts, opportunities and product catalog for an account.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/L2Q/opportunities.png" alt="L2Q opportunities Kanban widget" loading="lazy" />
+          <figcaption><strong>Opportunities</strong>Kanban + table view of the open pipeline.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/L2Q/leads.png" alt="L2Q leads widget" loading="lazy" />
+          <figcaption><strong>Leads</strong>Lead list with status filter and qualification signals.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/L2Q/quotes.png" alt="L2Q quotes widget" loading="lazy" />
+          <figcaption><strong>Quotes</strong>Quote cards with line items and pricing.</figcaption>
+        </figure>
+        <figure class="shot">
+          <img src="../assets/repos/L2Q/dashboard-dark.png" alt="L2Q dashboard in dark mode" loading="lazy" />
+          <figcaption><strong>Dashboard — dark mode</strong>Every widget adapts to light, dark and high-contrast themes.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Architecture</h2>
+      <div class="callout">
+        <p>A single FastMCP / Streamable HTTP server hosted on Azure Container Apps fronts the Salesforce REST API (SOQL) and references the M365 Tooling Servers for Teams, Outlook and Calendar. It's designed to pair with an external market-intelligence MCP for company, macro and headline context inside the same agent.</p>
+        <p>Most tools are read-only; create and update tools are draft-first and require explicit confirmation before anything is written back to Salesforce. Each tool returns narrative text with prompt suggestions <em>and</em> structured content for the HTML + Skybridge widgets.</p>
+      </div>
+    </section>
+
+    <footer class="project-footer">
+      <a class="btn btn-primary" href="https://github.com/scadam/L2Q" target="_blank" rel="noopener">Explore the repository on GitHub ↗</a>
+      <div class="related">
+        <a href="ess-mcp.html">→ ess-mcp</a>
+        <a href="retail-mcp.html">→ retail-mcp</a>
+        <a href="digital-lawyer.html">→ digital-lawyer</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
