@@ -152,6 +152,40 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; letter-spacing: -0
   background: var(--fg); opacity: 0.55;
 }
 
+/* ---------- Hero pills ---------- */
+.pills {
+  list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 44px;
+}
+.pills li {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;
+  padding: 7px 16px; border: 1px solid var(--line); border-radius: 999px;
+  color: var(--muted);
+}
+
+/* ---------- Repo card tags ---------- */
+.arrow { color: var(--muted); font-size: 1.1rem; transition: transform 0.2s, color 0.2s; }
+.card:hover .arrow { color: var(--fg); transform: translate(2px, -2px); }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+  padding: 4px 10px; border-radius: 6px;
+  background: var(--bg); border: 1px solid var(--line); color: var(--muted);
+}
+
+/* ---------- Recent posts strip ---------- */
+.posts-strip {
+  margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px;
+}
+.posts-label {
+  font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+  text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted);
+  width: 100%;
+}
+.post-link { font-size: 0.92rem; color: var(--muted); transition: color 0.2s; }
+.post-link:hover { color: var(--fg); }
+.post-more { color: var(--fg); font-weight: 500; }
+
 /* ---------- Articles / Viewpoints ---------- */
 .article-list { display: flex; flex-direction: column; gap: 0; }
 .article {
