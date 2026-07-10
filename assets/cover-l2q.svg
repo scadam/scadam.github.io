@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" role="img" aria-label="L2Q lead to quote">
+  <rect x="0" y="0" width="600" height="340" fill="#0e0e0e"/>
+  <g stroke="#f2f2f2" stroke-width="1.4" fill="none">
+    <rect x="70" y="130" width="90" height="80" rx="8"/>
+    <rect x="255" y="130" width="90" height="80" rx="8"/>
+    <rect x="440" y="130" width="90" height="80" rx="8"/>
+    <line x1="160" y1="170" x2="248" y2="170"/><path d="M240 163 L255 170 L240 177 Z" fill="#f2f2f2"/>
+    <line x1="345" y1="170" x2="433" y2="170"/><path d="M425 163 L440 170 L425 177 Z" fill="#f2f2f2"/>
+  </g>
+  <text x="115" y="175" fill="#f2f2f2" font-family="'JetBrains Mono',monospace" font-size="13" text-anchor="middle">LEAD</text>
+  <text x="300" y="175" fill="#f2f2f2" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">AGENT</text>
+  <text x="485" y="175" fill="#f2f2f2" font-family="'JetBrains Mono',monospace" font-size="12" text-anchor="middle">QUOTE</text>
+  <text x="28" y="316" fill="#8a8a8a" font-family="'JetBrains Mono',monospace" font-size="12">L2Q · Salesforce → priced quote</text>
+</svg>

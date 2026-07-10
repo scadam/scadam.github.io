@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" role="img" aria-label="Microsoft Frontier Agent Platform — layered architecture">
+  <defs>
+    <style>
+      .bg { fill: #0a0a0a; }
+      .layer { fill: none; stroke: #f2f2f2; stroke-width: 1.2; }
+      .layerfill { fill: #141414; }
+      .t { fill: #f2f2f2; font-family: 'JetBrains Mono', ui-monospace, monospace; }
+      .lbl { fill: #f2f2f2; font-family: Inter, system-ui, sans-serif; font-weight: 600; }
+      .sub { fill: #9a9a9a; font-family: Inter, system-ui, sans-serif; font-weight: 400; }
+      .num { fill: #6b6b6b; font-family: 'JetBrains Mono', ui-monospace, monospace; }
+      .chip { fill: none; stroke: #333; stroke-width: 1; }
+      .chipt { fill: #cfcfcf; font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="800" height="460" rx="14" />
+
+  <!-- title -->
+  <text class="t" x="32" y="42" font-size="13" letter-spacing="3">MICROSOFT · FRONTIER AGENT PLATFORM</text>
+
+  <!-- Front door / surface -->
+  <rect class="layerfill" x="32" y="62" width="736" height="60" rx="8" />
+  <rect class="layer" x="32" y="62" width="736" height="60" rx="8" />
+  <text class="num" x="52" y="88" font-size="12">01</text>
+  <text class="lbl" x="52" y="98" font-size="16">Microsoft 365 Copilot — the front door</text>
+  <text class="sub" x="52" y="115" font-size="12">Multi-surface · multi-model · multi-modal · first-party agents · AI Search</text>
+
+  <!-- Intelligence -->
+  <rect class="layerfill" x="32" y="134" width="360" height="60" rx="8" />
+  <rect class="layer" x="32" y="134" width="360" height="60" rx="8" />
+  <text class="num" x="52" y="160" font-size="12">02</text>
+  <text class="lbl" x="52" y="170" font-size="16">Intelligence — Work IQ</text>
+  <text class="sub" x="52" y="187" font-size="12">Fabric IQ · Foundry IQ · context &amp; memory</text>
+
+  <!-- Build personas -->
+  <rect class="layerfill" x="408" y="134" width="360" height="60" rx="8" />
+  <rect class="layer" x="408" y="134" width="360" height="60" rx="8" />
+  <text class="num" x="428" y="160" font-size="12">03</text>
+  <text class="lbl" x="428" y="170" font-size="16">Build — task migration</text>
+  <text class="sub" x="428" y="187" font-size="12">Zero-code · Copilot Studio · Foundry &amp; SDKs</text>
+
+  <!-- Openness -->
+  <rect class="layerfill" x="32" y="206" width="360" height="60" rx="8" />
+  <rect class="layer" x="32" y="206" width="360" height="60" rx="8" />
+  <text class="num" x="52" y="232" font-size="12">04</text>
+  <text class="lbl" x="52" y="242" font-size="16">Openness</text>
+  <text class="sub" x="52" y="259" font-size="12">OpenAPI · MCP · A2A · connectors · Computer Use</text>
+
+  <!-- Data -->
+  <rect class="layerfill" x="408" y="206" width="360" height="60" rx="8" />
+  <rect class="layer" x="408" y="206" width="360" height="60" rx="8" />
+  <text class="num" x="428" y="232" font-size="12">05</text>
+  <text class="lbl" x="428" y="242" font-size="16">Data platform</text>
+  <text class="sub" x="428" y="259" font-size="12">Fabric · Databricks · Dataverse — governed</text>
+
+  <!-- Control system -->
+  <rect class="layerfill" x="32" y="278" width="736" height="70" rx="8" />
+  <rect class="layer" x="32" y="278" width="736" height="70" rx="8" stroke-width="1.8" />
+  <text class="num" x="52" y="304" font-size="12">06</text>
+  <text class="lbl" x="52" y="314" font-size="16">Agent Control System — Agent 365</text>
+  <text class="sub" x="52" y="332" font-size="12">Identity · security &amp; policy · observability · threat protection · lifecycle</text>
+
+  <!-- chips row -->
+  <g>
+    <rect class="chip" x="32" y="372" width="132" height="30" rx="15" />
+    <text class="chipt" x="98" y="391" font-size="11" text-anchor="middle">DIGITAL EMPLOYEE</text>
+
+    <rect class="chip" x="176" y="372" width="92" height="30" rx="15" />
+    <text class="chipt" x="222" y="391" font-size="11" text-anchor="middle">GOVERNED</text>
+
+    <rect class="chip" x="280" y="372" width="104" height="30" rx="15" />
+    <text class="chipt" x="332" y="391" font-size="11" text-anchor="middle">AUDITABLE</text>
+
+    <rect class="chip" x="396" y="372" width="120" height="30" rx="15" />
+    <text class="chipt" x="456" y="391" font-size="11" text-anchor="middle">ADDRESSABLE</text>
+  </g>
+
+  <text class="sub" x="32" y="430" font-size="12" font-style="italic">A workforce, not a feature — governance designed in from day one.</text>
+</svg>
