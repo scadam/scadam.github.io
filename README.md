@@ -1,8 +1,10 @@
 # scott-adams.ai
 
 Repo-first portfolio for **Scott Adams** — Agent Sales Global Black Belt at
-Microsoft. The site presents working reference implementations as business
-transformation case studies rather than a résumé.
+Microsoft. The customer-facing site positions Scott as an experienced agentic-AI
+transformation advisor who qualifies the business outcome, leads a hands-on POC,
+and designs the governed path to production scale. Working reference
+implementations provide the proof rather than acting as standalone product demos.
 
 The homepage includes:
 

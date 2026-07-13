@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("clawpilotTheme");
+      const theme = param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <title>MCP Apps: when enterprise agents stop feeling like chat — Scott Adams</title>
+  <meta name="description" content="Why tool calling is not the user experience, and how MCP Apps give enterprise agents structured, stateful interfaces with a clearer path from POC to governed production." />
+  <meta property="og:title" content="MCP Apps: when enterprise agents stop feeling like chat" />
+  <meta property="og:description" content="Structured, stateful agent interfaces—and the buy-versus-build, governance and POC decisions behind them." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://scott-adams.ai/assets/repos/ess-mcp/widget-team-dashboard.png" />
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/22813976?s=64&amp;v=4" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <article class="article-page">
+    <a class="article-back" href="../index.html#viewpoints">← All viewpoints</a>
+
+    <header class="article-header">
+      <span class="article-meta">March 2026 · Interaction design · 6 min read</span>
+      <h1>MCP Apps: when enterprise agents stop feeling like chat</h1>
+    </header>
+
+    <div class="article-body">
+      <p class="article-standfirst">Most agent demonstrations stop at a technical milestone: <strong>the agent can call a tool</strong>. That proves the integration. It does not prove that an employee can complete the work predictably—or that the organisation can operate the experience at scale.</p>
+
+      <figure class="article-figure">
+        <img src="../assets/repos/ess-mcp/widget-team-dashboard.png" alt="An interactive people-leader dashboard returned by an ESS-MCP tool" />
+        <figcaption>An MCP tool can return an interaction surface, not just another block of text.</figcaption>
+      </figure>
+
+      <p>That is why MCP Apps matter. They let an MCP tool return a declared user interface alongside its result: a form, dashboard, choice, guided flow or review surface that the agent host can render inline. The model still reasons and orchestrates. The MCP server still owns the business capability. But the person gets an intentional interface for the task instead of having to express every state change as a free-text prompt.</p>
+
+      <div class="article-thesis">
+        <span>The shift</span>
+        <strong>Tool calling gives the agent capability. MCP Apps make that capability usable.</strong>
+      </div>
+
+      <h2>Chat is useful. It should not carry the whole workflow.</h2>
+      <p>Conversation is excellent for intent, ambiguity and explanation. It is less effective when the work needs constrained choices, visible progress, validation, comparison or confirmation. Asking a user to describe a multi-field request in prose—or asking the model to compose hidden JSON on their behalf—creates unnecessary uncertainty.</p>
+      <p>A structured MCP App can show what the agent already knows, what information is still missing and what will happen next. The user can inspect, amend and confirm. That feels less like experimenting with a chatbot and more like working with a capable colleague who has brought the right form, dashboard or decision pack to the conversation.</p>
+      <p>This is not an argument for rebuilding every enterprise application inside chat. It is a case for giving each task the smallest useful interaction surface, in the flow of work, while the systems of record remain where they are.</p>
+
+      <h2>One capability layer, several ways of working</h2>
+      <p>I built the open-source <strong>ESS-MCP reference implementation</strong> to test this pattern across a realistic enterprise estate. It models seven enterprise-system domains, exposes 204 tools and includes 76 interactive widgets. Those numbers are not the outcome; the important proof is that the same governed capability layer can support four different shapes of work:</p>
+      <ul class="article-list-points">
+        <li><strong>Microsoft 365 Copilot</strong> for fast, human-led work in the everyday front door.</li>
+        <li><strong>MCP Apps</strong> for structured, stateful interactions inside the conversation.</li>
+        <li><strong>Copilot Cowork skills</strong> for deeper work that produces dashboards, decks, cards and briefs.</li>
+        <li><strong>An autonomous Agent 365 teammate</strong> for event-triggered work with its own identity, controls and telemetry.</li>
+      </ul>
+      <p>It is a reference build, not a customer deployment, and it uses simulation or mock adapters where a live tenant would be inappropriate. Its value is architectural: one capability layer can serve different interaction models without rebuilding every integration for every agent surface.</p>
+
+      <h2>A clearer buy-versus-build boundary</h2>
+      <p>The architecture creates a useful discipline. Buy the common front door, reasoning and orchestration where a platform already provides them. Build where the organisation is genuinely different: its processes, policy, data access, actions and domain-specific interaction patterns.</p>
+      <p>Remote MCP keeps that differentiated capability behind a protocol boundary. The agent host does not need to absorb the implementation of every enterprise system, and the MCP server does not need to become a new chat product. MCP Apps complete the pattern by giving the capability a predictable interface when text alone is not enough.</p>
+      <p>That separation also improves the commercial conversation. Instead of funding a complete bespoke agent stack, the investment can focus on the tools, interfaces and operational controls that create distinctive value. It does not make infrastructure or model cost disappear; it makes the components—and the reason for each cost—clearer.</p>
+
+      <h2>Structured does not automatically mean governed</h2>
+      <p>MCP Apps can improve human control: choices can be constrained, state can be visible and consequential actions can require explicit confirmation. But the interface is never the security boundary.</p>
+      <p>Authorisation, tenant and user scope, tool allow-lists, data validation, rate limits, audit and approval must still be enforced by the server and platform. A production POC should demonstrate those controls alongside the experience. The question is not only whether the form renders; it is whether the right identity can perform the right action, against the right data, with evidence afterwards.</p>
+
+      <h2>What I would ask an MCP Apps POC to prove</h2>
+      <ol class="article-checklist">
+        <li><strong>A real task reaches completion.</strong><span>Not just a successful tool call or a polished answer.</span></li>
+        <li><strong>The interaction is legible.</strong><span>The user can see state, missing information, choices and consequences.</span></li>
+        <li><strong>The capability is reusable.</strong><span>The same MCP layer can support the appropriate human-led, deep-work or autonomous surface.</span></li>
+        <li><strong>The controls survive the demo.</strong><span>Identity, permissions, validation, confirmation, telemetry and human judgement are designed in.</span></li>
+        <li><strong>There is a named route to production.</strong><span>Exit criteria, ownership, operating cost and the scale plan are explicit.</span></li>
+      </ol>
+
+      <p>The better question for an enterprise agent is no longer, “Can it call our tools?” It is: <strong>Can people complete valuable work through it predictably, and can we govern the result in production?</strong></p>
+      <p>MCP Apps do not answer that whole question. But they provide the interaction layer that makes a serious answer possible.</p>
+    </div>
+
+    <footer class="article-footer">
+      <div class="project-actions">
+        <a class="btn btn-primary" href="https://www.linkedin.com/posts/adamsscott_mcpapps-mcp-m365copilot-activity-7435382870497460224-IF6H" target="_blank" rel="noopener">Watch the original demo on LinkedIn →</a>
+        <a class="btn btn-ghost" href="https://github.com/scadam/ess-mcp" target="_blank" rel="noopener">Explore ESS-MCP on GitHub ↗</a>
+      </div>
+    </footer>
+  </article>
+</body>
+</html>
