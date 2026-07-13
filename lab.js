@@ -323,6 +323,7 @@
 
   const filterButtons = Array.from(document.querySelectorAll("[data-widget-filter]"));
   const widgetTiles = Array.from(document.querySelectorAll("[data-widget-category]"));
+  const widgetGallery = document.querySelector(".widget-gallery");
   const widgetDialog = document.getElementById("widget-dialog");
   const widgetDialogTitle = document.getElementById("widget-dialog-title");
   const widgetDialogImage = document.getElementById("widget-dialog-image");
@@ -1354,6 +1355,8 @@
       tile.setAttribute("aria-hidden", String(!visible));
       tile.tabIndex = visible ? 0 : -1;
     });
+
+    if (widgetGallery) widgetGallery.scrollLeft = 0;
   }
 
   function openWidgetPreview(tile) {
