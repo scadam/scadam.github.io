@@ -11,9 +11,9 @@
     })();
   </script>
   <title>MCP Apps: when enterprise agents stop feeling like chat — Scott Adams</title>
-  <meta name="description" content="Why tool calling is not the user experience, and how MCP Apps give enterprise agents structured, stateful interfaces with a clearer path from POC to governed production." />
+  <meta name="description" content="Why tool calling is not the user experience, how MCP Apps add structured interfaces, and what enterprises must prove before production." />
   <meta property="og:title" content="MCP Apps: when enterprise agents stop feeling like chat" />
-  <meta property="og:description" content="Structured, stateful agent interfaces—and the buy-versus-build, governance and POC decisions behind them." />
+  <meta property="og:description" content="Structured agent interfaces—and the buy, adopt, build, governance and POC decisions behind them." />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://scott-adams.ai/assets/repos/ess-mcp/widget-team-dashboard.png" />
   <link rel="icon" href="https://avatars.githubusercontent.com/u/22813976?s=64&amp;v=4" />
@@ -24,19 +24,22 @@
     <a class="article-back" href="../index.html#viewpoints">← All viewpoints</a>
 
     <header class="article-header">
-      <span class="article-meta">March 2026 · Interaction design · 6 min read</span>
+      <span class="article-meta">July 2026 · Expanded from a March demo · 7 min read</span>
       <h1>MCP Apps: when enterprise agents stop feeling like chat</h1>
     </header>
 
     <div class="article-body">
       <p class="article-standfirst">Most agent demonstrations stop at a technical milestone: <strong>the agent can call a tool</strong>. That proves the integration. It does not prove that an employee can complete the work predictably—or that the organisation can operate the experience at scale.</p>
 
+      <p>This viewpoint expands on the MCP Apps video I shared in March 2026, using the current ESS-MCP reference build and MCP Apps specification to ask what the interaction pattern should prove for a customer.</p>
+
       <figure class="article-figure">
         <img src="../assets/repos/ess-mcp/widget-team-dashboard.png" alt="An interactive people-leader dashboard returned by an ESS-MCP tool" />
         <figcaption>An MCP tool can return an interaction surface, not just another block of text.</figcaption>
       </figure>
 
-      <p>That is why MCP Apps matter. They let an MCP tool return a declared user interface alongside its result: a form, dashboard, choice, guided flow or review surface that the agent host can render inline. The model still reasons and orchestrates. The MCP server still owns the business capability. But the person gets an intentional interface for the task instead of having to express every state change as a free-text prompt.</p>
+      <p>That is why MCP Apps matter. A tool description can declare an interactive UI resource through <code>_meta.ui.resourceUri</code>. A compatible host fetches that resource, typically renders it in a sandboxed frame, and passes the tool result into it. The app can then exchange structured data with the host and request permitted tool calls without routing every interaction back through the model. Host support and capabilities vary, so compatibility must be tested rather than assumed.</p>
+      <p>The model can still reason and orchestrate. The MCP server exposes or mediates the capability. The system of record remains authoritative. But the person gets an intentional interface for the task instead of having to express every state change as a free-text prompt.</p>
 
       <div class="article-thesis">
         <span>The shift</span>
@@ -48,32 +51,36 @@
       <p>A structured MCP App can show what the agent already knows, what information is still missing and what will happen next. The user can inspect, amend and confirm. That feels less like experimenting with a chatbot and more like working with a capable colleague who has brought the right form, dashboard or decision pack to the conversation.</p>
       <p>This is not an argument for rebuilding every enterprise application inside chat. It is a case for giving each task the smallest useful interaction surface, in the flow of work, while the systems of record remain where they are.</p>
 
-      <h2>One capability layer, several ways of working</h2>
-      <p>I built the open-source <strong>ESS-MCP reference implementation</strong> to test this pattern across a realistic enterprise estate. It models seven enterprise-system domains, exposes 204 tools and includes 76 interactive widgets. Those numbers are not the outcome; the important proof is that the same governed capability layer can support four different shapes of work:</p>
+      <h2>One shared capability layer, several ways of working</h2>
+      <p>I built the open-source <strong>ESS-MCP reference implementation</strong> to test this pattern across a realistic enterprise estate. It models seven enterprise platforms, exposes 204 MCP tools and includes 76 interactive widgets. Those numbers are not the outcome, and the complete toolset is not used by every experience. The architectural proof is that shared MCP capabilities can be composed into several appropriate ways of working:</p>
       <ul class="article-list-points">
-        <li><strong>Microsoft 365 Copilot</strong> for fast, human-led work in the everyday front door.</li>
-        <li><strong>MCP Apps</strong> for structured, stateful interactions inside the conversation.</li>
-        <li><strong>Copilot Cowork skills</strong> for deeper work that produces dashboards, decks, cards and briefs.</li>
-        <li><strong>An autonomous Agent 365 teammate</strong> for event-triggered work with its own identity, controls and telemetry.</li>
+        <li><strong>A Microsoft 365 Copilot declarative agent</strong> using all seven remote MCP servers for human-led work in the everyday front door.</li>
+        <li><strong>MCP Apps within compatible hosts</strong> for structured, stateful interactions—not a separate agent surface, but an extension to the tool experience.</li>
+        <li><strong>Five Copilot Cowork plugins</strong> pairing Agent Skills with the relevant remote MCP connectors to produce dashboards, decks, cards and briefs.</li>
+        <li><strong>An autonomous demo integrated with Microsoft Agent 365</strong> using selected MCP capabilities with agent identity, controls and telemetry.</li>
       </ul>
-      <p>It is a reference build, not a customer deployment, and it uses simulation or mock adapters where a live tenant would be inappropriate. Its value is architectural: one capability layer can serve different interaction models without rebuilding every integration for every agent surface.</p>
+      <p>It is a reference build, not a customer deployment, and it uses simulation or mock adapters where a live tenant would be inappropriate. Its value is architectural: a shared capability layer can serve different interaction models without rebuilding every integration for every host. Governance still has to be applied end to end across the host, identity provider, gateway or MCP server, and system of record.</p>
 
-      <h2>A clearer buy-versus-build boundary</h2>
-      <p>The architecture creates a useful discipline. Buy the common front door, reasoning and orchestration where a platform already provides them. Build where the organisation is genuinely different: its processes, policy, data access, actions and domain-specific interaction patterns.</p>
-      <p>Remote MCP keeps that differentiated capability behind a protocol boundary. The agent host does not need to absorb the implementation of every enterprise system, and the MCP server does not need to become a new chat product. MCP Apps complete the pattern by giving the capability a predictable interface when text alone is not enough.</p>
-      <p>That separation also improves the commercial conversation. Instead of funding a complete bespoke agent stack, the investment can focus on the tools, interfaces and operational controls that create distinctive value. It does not make infrastructure or model cost disappear; it makes the components—and the reason for each cost—clearer.</p>
+      <h2>A clearer buy, adopt or build boundary</h2>
+      <p>The architecture creates a useful discipline. Buy the common front door, reasoning and orchestration where a platform already provides them. Adopt supported platform, SaaS-vendor or partner connectors and MCP servers when they meet the security, service and lifecycle requirement. Build where the organisation is genuinely different: its process, policy, decision logic, actions or domain-specific interaction patterns.</p>
+      <p>Remote MCP puts that capability behind a protocol boundary. The host does not need to absorb every enterprise-system implementation, and the MCP server does not need to become another chat product. The boundary improves replaceability, but it does not remove host-extension differences, SaaS API coupling, authentication, versioning, testing or support obligations.</p>
+      <p>MCP Apps complete the pattern by giving a capability a predictable interface when text alone is not enough. The fully loaded economics still need to include platform licensing or consumption, model use, MCP hosting, vendor APIs, observability, engineering, security review and ongoing support. The advantage is not “free integration”; it is a clearer decision about where custom investment creates value.</p>
 
       <h2>Structured does not automatically mean governed</h2>
       <p>MCP Apps can improve human control: choices can be constrained, state can be visible and consequential actions can require explicit confirmation. But the interface is never the security boundary.</p>
-      <p>Authorisation, tenant and user scope, tool allow-lists, data validation, rate limits, audit and approval must still be enforced by the server and platform. A production POC should demonstrate those controls alongside the experience. The question is not only whether the form renders; it is whether the right identity can perform the right action, against the right data, with evidence afterwards.</p>
+      <p>An MCP App is active code. Its source and dependencies need provenance, review, patching and content-security controls. Authorisation, tenant and user scope, tool allow-lists, data validation, rate limits, audit and approval must still be enforced by the server and platform.</p>
+      <p>Telemetry is not harmless by default either. HR, payroll, sales or procurement payloads can leak into logs and traces unless they are minimised, redacted, access-controlled and governed by explicit retention and residency policies. A production-bound POC should demonstrate those controls alongside the experience.</p>
+      <p>The question is not only whether the form renders; it is whether the right identity can perform the right action, against the right data, with evidence afterwards—and whether failures leave the process in a safe, supportable state.</p>
 
       <h2>What I would ask an MCP Apps POC to prove</h2>
       <ol class="article-checklist">
-        <li><strong>A real task reaches completion.</strong><span>Not just a successful tool call or a polished answer.</span></li>
-        <li><strong>The interaction is legible.</strong><span>The user can see state, missing information, choices and consequences.</span></li>
-        <li><strong>The capability is reusable.</strong><span>The same MCP layer can support the appropriate human-led, deep-work or autonomous surface.</span></li>
-        <li><strong>The controls survive the demo.</strong><span>Identity, permissions, validation, confirmation, telemetry and human judgement are designed in.</span></li>
-        <li><strong>There is a named route to production.</strong><span>Exit criteria, ownership, operating cost and the scale plan are explicit.</span></li>
+        <li><strong>A measurable outcome improves.</strong><span>Start with a baseline and target for completion, quality, latency and the business result—not just a successful tool call.</span></li>
+        <li><strong>The target host works for real users.</strong><span>Verify host support, accessibility, responsive behaviour, latency and consent on the clients people will actually use.</span></li>
+        <li><strong>The interaction is legible.</strong><span>The user can see state, missing information, choices, consequences and the boundary between suggestion and action.</span></li>
+        <li><strong>Reuse is proven where it matters.</strong><span>If the use case requires multiple hosts or human-led, deep-work and autonomous patterns, prove only the combinations that have real value.</span></li>
+        <li><strong>The controls survive the demo.</strong><span>Identity, permissions, code provenance, validation, confirmation, telemetry minimisation and human judgement are designed in.</span></li>
+        <li><strong>Reliability is operational.</strong><span>Test representative volume, retries, partial failure, safe rollback, monitoring and named support ownership.</span></li>
+        <li><strong>There is a named route to production.</strong><span>Exit criteria, fully loaded unit cost, architecture ownership and the governed scale plan are explicit.</span></li>
       </ol>
 
       <p>The better question for an enterprise agent is no longer, “Can it call our tools?” It is: <strong>Can people complete valuable work through it predictably, and can we govern the result in production?</strong></p>
