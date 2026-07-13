@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("clawpilotTheme");
+      const theme = param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <title>ESS-MCP — Enterprise Self-Service on MCP · Scott Adams</title>
   <meta name="description" content="Enterprise Self-Service, end-to-end on the Model Context Protocol. 7 production-grade MCP servers, a Microsoft 365 Copilot declarative agent, 5 Copilot Cowork plugins, and an autonomous Agent 365 teammate." />
 
@@ -12,9 +19,6 @@
   <meta property="og:image" content="https://scott-adams.ai/assets/repos/ess-mcp/widget-team-dashboard.png" />
 
   <link rel="icon" href="https://avatars.githubusercontent.com/u/22813976?s=64&v=4" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -47,7 +51,7 @@
 
     <section class="project-section">
       <h2>The four pillars</h2>
-      <p class="section-intro">The same enterprise toolset — Workday, ServiceNow, Salesforce, Jira, SAP SuccessFactors, SAP Ariba and Coupa — surfaced across four agent patterns.</p>
+      <p class="section-intro">One enterprise tool layer spanning people, IT, CRM, engineering, SAP and procurement — surfaced across four agent patterns.</p>
       <div class="feature-grid">
         <div class="feature">
           <span class="feature-icon">01 · MCP Servers</span>
@@ -79,10 +83,6 @@
         <figure class="shot">
           <img src="../assets/repos/ess-mcp/widget-team-dashboard.png" alt="Workday team dashboard widget" loading="lazy" />
           <figcaption><strong>Workday — Team Dashboard</strong>Manager view across the team's workforce data.</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="../assets/repos/ess-mcp/widget-incident-list.png" alt="ServiceNow incident list widget" loading="lazy" />
-          <figcaption><strong>ServiceNow — Incident List</strong>Live IT operations, actionable inline.</figcaption>
         </figure>
         <figure class="shot">
           <img src="../assets/repos/ess-mcp/widget-crm-pipeline.png" alt="Salesforce sales pipeline widget" loading="lazy" />

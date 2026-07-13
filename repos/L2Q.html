@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("clawpilotTheme");
+      const theme = param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <title>L2Q — Lead-to-Quote MCP for Salesforce · Scott Adams</title>
   <meta name="description" content="An enterprise-grade MCP server that gives fintech sales professionals a complete Lead-to-Quote workflow without ever leaving the flow of work — powering both a Microsoft 365 Copilot declarative agent and a Copilot Cowork plugin over live Salesforce data." />
 
@@ -12,9 +19,6 @@
   <meta property="og:image" content="https://scott-adams.ai/assets/repos/L2Q/dashboard.png" />
 
   <link rel="icon" href="https://avatars.githubusercontent.com/u/22813976?s=64&v=4" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>

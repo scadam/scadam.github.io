@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("clawpilotTheme");
+      const theme = param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+  <title>csm-aiteammate — Autonomous Digital Customer Success · Scott Adams</title>
+  <meta name="description" content="An event-triggered Digital Customer Success Manager that acts with a governed Agent 365 identity, applies deterministic routing rules, and preserves human judgement and sponsor control." />
+
+  <meta property="og:title" content="csm-aiteammate — Autonomous Digital Customer Success" />
+  <meta property="og:description" content="A customer signal becomes governed work without waiting for a prompt: seven autonomous stages, deterministic routing, human judgement and fleet supervision." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://scott-adams.ai/repos/csm-aiteammate.html" />
+
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/22813976?s=64&amp;v=4" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <main class="project-page">
+    <a class="article-back" href="../index.html#work">← Selected work</a>
+
+    <header class="project-hero">
+      <span class="project-eyebrow">github.com/scadam/csm-aiteammate · Agent 365 · Customer success · Autonomous</span>
+      <h1>A customer signal becomes governed work — without waiting for a prompt.</h1>
+      <p class="project-lede">
+        A Digital Customer Success Manager that starts when a product-usage signal, release event
+        or renewal window lands. It resolves its own governed agent identity, builds customer context,
+        applies auditable rules, drafts from approved content and either handles the routine work or
+        stops at the point where its human CSM should exercise judgement.
+      </p>
+      <div class="project-actions">
+        <a class="btn btn-primary" href="../index.html?scenario=autonomous#lab">Run the safe replay</a>
+        <a class="btn btn-ghost" href="https://github.com/scadam/csm-aiteammate" target="_blank" rel="noopener">Explore the repository ↗</a>
+      </div>
+    </header>
+
+    <div class="project-stats">
+      <div class="stat-card"><span class="stat-num">7</span><span class="stat-label">Stage autonomous journey</span></div>
+      <div class="stat-card"><span class="stat-num">16</span><span class="stat-label">Business MCP tools</span></div>
+      <div class="stat-card"><span class="stat-num">3</span><span class="stat-label">Supervision surfaces</span></div>
+      <div class="stat-card"><span class="stat-num">0</span><span class="stat-label">Human turns to start</span></div>
+    </div>
+
+    <section class="autonomous-project-visual" aria-label="Autonomous customer-success operating model">
+      <div class="autonomous-case-visual">
+        <div class="case-visual-head">
+          <span><i aria-hidden="true"></i> Product signal received</span>
+          <strong>Event-triggered</strong>
+        </div>
+        <div class="case-visual-stages" aria-hidden="true">
+          <span>Signal</span><span>Context</span><span>Decide</span><span>Build</span><span>Review</span><span>Deliver</span><span>Learn</span>
+        </div>
+        <div class="case-visual-decision">
+          <small>Deterministic decision</small>
+          <strong>Routine work scales. Judgement stays human.</strong>
+          <span>Influence · sentiment · account strategy · topic complexity · prior acceptance</span>
+        </div>
+        <div class="case-visual-surfaces">
+          <span><small>Manager cockpit</small><strong>One CSM, one autopilot</strong></span>
+          <span><small>Sponsor control</small><strong>Fleet, cost and queues</strong></span>
+          <span><small>Governance</small><strong>Identity and evidence</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>The transformation is the operating model</h2>
+      <p class="section-intro">
+        Traditional customer success is organised around people checking dashboards, finding the next
+        account and assembling context before they can act. This design reverses that flow: events find
+        the right digital teammate, routine work proceeds continuously, and humans receive only the work
+        that benefits from relationship judgement.
+      </p>
+      <div class="feature-grid">
+        <article class="feature">
+          <span class="feature-icon">Event landing</span>
+          <h3>Work arrives; nobody has to ask</h3>
+          <p>Usage thresholds, renewal windows and relevant product releases are the start of the process. The same engine can be invoked by an event hook, timer or programme sweep.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon">Named digital teammate</span>
+          <h3>One governed agent per CSM</h3>
+          <p>Each autopilot has an Agent 365 identity, a defined human manager, a scoped book of business and working memory. Autonomous work acts as the agent; access to a manager's Microsoft 365 data still requires delegated authority.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon">Deterministic judgement boundary</span>
+          <h3>Rules decide where autonomy stops</h3>
+          <p>Strategic accounts, frustrated or influential customers, complex recovery topics and first senior contacts route to review. Routine nudges and low-complexity tips can proceed automatically.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon">Management system</span>
+          <h3>Autonomy remains supervised</h3>
+          <p>The human CSM sees account work and review items; the programme sponsor sees fleet performance, queues, response time, inference cost and acceptance; the technical owner sees identity, access and evidence.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>The seven-stage journey</h2>
+      <p class="section-intro">Every run records the same ordered stages, tool calls, decisions, token usage, cost and outcome so the business process is explainable after the fact.</p>
+      <ol class="autonomous-timeline">
+        <li class="autonomous-stage is-done">
+          <span class="autonomous-stage-marker">01</span>
+          <div class="autonomous-stage-copy"><strong class="autonomous-stage-title">Signal detected</strong><p class="autonomous-stage-summary">Select the highest-severity open signal for the assigned account.</p><span class="autonomous-stage-tool">detect_signals</span></div>
+        </li>
+        <li class="autonomous-stage is-done">
+          <span class="autonomous-stage-marker">02</span>
+          <div class="autonomous-stage-copy"><strong class="autonomous-stage-title">Context built</strong><p class="autonomous-stage-summary">Combine customer-success context with recent Microsoft 365 relationship grounding.</p><span class="autonomous-stage-tool">get_account_context + Work IQ</span></div>
+        </li>
+        <li class="autonomous-stage is-done">
+          <span class="autonomous-stage-marker">03</span>
+          <div class="autonomous-stage-copy"><strong class="autonomous-stage-title">Action decided</strong><p class="autonomous-stage-summary">Apply the signal-action map and auditable escalation rules.</p><span class="autonomous-stage-tool">decide_next_best_action</span></div>
+        </li>
+        <li class="autonomous-stage is-done">
+          <span class="autonomous-stage-marker">04</span>
+          <div class="autonomous-stage-copy"><strong class="autonomous-stage-title">Content built</strong><p class="autonomous-stage-summary">Generate from approved content in the CSM's voice and screen the result.</p><span class="autonomous-stage-tool">build_draft + Purview</span></div>
+        </li>
+        <li class="autonomous-stage is-done">
+          <span class="autonomous-stage-marker">05</span>
+          <div class="autonomous-stage-copy"><strong class="autonomous-stage-title">Prioritised</strong><p class="autonomous-stage-summary">Set priority and route judgement-sensitive work to the assigned CSM.</p><span class="autonomous-stage-tool">create_review_task</span></div>
+        </li>
+        <li class="autonomous-stage is-done">
+          <span class="autonomous-stage-marker">06</span>
+          <div class="autonomous-stage-copy"><strong class="autonomous-stage-title">Delivered or gated</strong><p class="autonomous-stage-summary">Execute an allowed channel or retain the draft behind the human boundary.</p><span class="autonomous-stage-tool">email · in-product · review</span></div>
+        </li>
+        <li class="autonomous-stage is-done">
+          <span class="autonomous-stage-marker">07</span>
+          <div class="autonomous-stage-copy"><strong class="autonomous-stage-title">System learns</strong><p class="autonomous-stage-summary">Record the outcome and update redacted working memory.</p><span class="autonomous-stage-tool">write_outcome + remember</span></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="project-section">
+      <h2>What makes the autonomy governable</h2>
+      <p class="section-intro">The control system is not a wrapper around the demo. It is part of the design of the work.</p>
+      <div class="feature-grid">
+        <article class="feature">
+          <span class="feature-icon">Identity</span>
+          <h3>Agent ID for autonomous work; OBO for human data</h3>
+          <p>The agent can mint its own governed token without an incoming user turn. Reading or writing a manager's Microsoft 365 data remains an on-behalf-of operation and cannot silently fall through to the agent identity.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon">Data boundary</span>
+          <h3>Cross-customer leakage is a hard stop</h3>
+          <p>Grounding is screened for prompt injection, generated content is classified, and a cross-customer fence blocks a draft if another customer's confidential identifiers appear.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon">Evidence</span>
+          <h3>Every journey can produce a forensic pack</h3>
+          <p>The job ledger captures stages, tools, arguments, bounded results, acting identity, model turns, token cost, policy decisions and final outcome.</p>
+        </article>
+        <article class="feature">
+          <span class="feature-icon">Access lifecycle</span>
+          <h3>Governed access can expire</h3>
+          <p>Agent instances, manager mapping and Entra ID Governance access-package state are visible to the technical owner instead of being hidden in deployment configuration.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-section">
+      <h2>Public portfolio boundary</h2>
+      <div class="truth-boundary">
+        <strong>The operational dashboards are deliberately not embedded here.</strong>
+        <p>
+          They contain manager-, customer- and identity-scoped information and include real mutation paths
+          such as starting work, approving outreach and saving mailbox drafts. The public lab is therefore
+          a deterministic, synthetic, side-effect-free replay of the repository's stages and rules. It
+          makes no calls to the control plane and does not claim to be a live customer-success run.
+        </p>
+      </div>
+    </section>
+
+    <footer class="project-footer">
+      <a class="btn btn-primary" href="https://github.com/scadam/csm-aiteammate" target="_blank" rel="noopener">Explore the repository on GitHub ↗</a>
+      <div class="related">
+        <a href="ess-mcp.html">→ ess-mcp</a>
+        <a href="digital-lawyer.html">→ digital-lawyer</a>
+        <a href="L2Q.html">→ L2Q</a>
+        <a href="retail-mcp.html">→ retail-mcp</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

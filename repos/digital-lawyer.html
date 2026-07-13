@@ -3,6 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("clawpilotTheme");
+      const theme = param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
   <title>digital-lawyer — AI Associate Solicitor · Scott Adams</title>
   <meta name="description" content="A Digital Worker — an AI Associate Solicitor named Alex Morgan — built with the Microsoft Agent Framework and Agent 365 SDK. It reviews supplier agreements, produces redlines, logs risk decisions, and escalates when authority is exceeded." />
 
@@ -12,9 +19,6 @@
   <meta property="og:image" content="https://scott-adams.ai/assets/repos/digital-lawyer/activity-dashboard.png" />
 
   <link rel="icon" href="https://avatars.githubusercontent.com/u/22813976?s=64&v=4" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>

@@ -1,9 +1,56 @@
 # scott-adams.ai
 
-Personal brand site for **Scott Adams** — Director, AI Workforce Solutions at Microsoft.
-A clean, minimal, monochrome single-page site that showcases GitHub work and links out to LinkedIn.
+Repo-first portfolio for **Scott Adams** — Agent Sales Global Black Belt at
+Microsoft. The site presents working reference implementations as business
+transformation case studies rather than a résumé.
 
-Static site — no build step. Just `index.html`, `styles.css`, and a `CNAME`.
+The homepage includes:
+
+- A source-aligned, deterministic replay of the seven-stage autonomous journey in
+	`csm-aiteammate`, using only synthetic redacted data and no external/API calls or
+	side effects.
+- Three guided, read-only MCP scenarios running against public Azure Container Apps
+	endpoints (`retail-mcp`, `L2Q`, and the mocked Coupa server in `ess-mcp`). Each
+	scenario reads the tool's `ui://` resource and renders the actual OpenAI Apps SDK
+	widget in a sandboxed iframe.
+- A filterable, full-size gallery of MCP App/widget surfaces.
+- Transformation narratives led by `csm-aiteammate`, followed by `ess-mcp`,
+	`retail-mcp`, `L2Q`, and `digital-lawyer`.
+- Supporting viewpoints and professional context.
+
+Static site — no build step. The live lab is implemented in `lab.js` using the
+Streamable HTTP MCP transport directly from the browser.
+
+## Transformation-lab safety model
+
+- The autonomous CSM replay never calls its operational control plane. Manager,
+	sponsor, identity, customer, review and mutation APIs are not in this site's CSP or
+	client allowlist.
+- The replay follows the repository's real seven-stage ordering and published rule
+	IDs, but uses synthetic redacted inputs and disables delivery, persistence and
+	mailbox actions.
+- Endpoint URLs and tool calls are hard-coded in an allowlist.
+- Only read-only demonstration tools are exposed.
+- Arbitrary endpoint, tool, or argument entry is intentionally not available.
+- Tool-delivered HTML runs without same-origin access, forms, popups, or network
+	calls. The host supplies only `toolOutput` and non-mutating Apps SDK bridge methods.
+- Widget follow-up prompts are displayed as previews and are not sent to an agent or
+	executed as tools.
+- No credentials, access keys, connection strings, SAS tokens, or bearer tokens are
+	stored or requested by the site.
+- Real Workday tenant data and the ServiceNow instance are not used by the public lab.
+- Stateful MCP sessions are closed after each scenario where supported.
+- If an endpoint cannot be reached from the current origin, the UI clearly labels and
+	renders a representative preview rather than pretending it is live.
+- The Coupa Container Apps environment suffix is redacted in the visible toolbar. The
+	real destination necessarily remains in the static client/CSP so the browser can
+	make the direct call; concealing it from source or browser developer tools would
+	require a server-side proxy.
+
+The browser allowlist is a UX boundary, not a substitute for server-side security.
+Keep these endpoints limited to demonstration data. Before pointing the lab at any
+non-demo system, enforce the read-only tool allowlist, origin policy, throttling, and
+abuse protection at APIM or another server-side gateway.
 
 ---
 

@@ -3,309 +3,610 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scott Adams — Agents Global Black Belt</title>
-  <meta name="description" content="Scott Adams — Director, Agents Global Black Belt (GBB) at Microsoft. Agentic AI across Foundry, GitHub, Copilot Studio, and Agent 365." />
+  <title>Scott Adams — Agent-led business transformation</title>
+  <meta name="description" content="Scott Adams helps enterprises redesign work around agents, then builds the governed MCP and Agent 365 reference systems that make the transformation tangible." />
   <meta name="author" content="Scott Adams" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://avatars.githubusercontent.com https://ca-retail-mcp-test.icysea-401f5140.uksouth.azurecontainerapps.io https://ca-l2q-dev.wonderfulhill-26d0f535.uksouth.azurecontainerapps.io https://essmcp-coupa.wittysand-460bf1d9.eastus.azurecontainerapps.io; media-src 'self' data: blob: https://ca-retail-mcp-test.icysea-401f5140.uksouth.azurecontainerapps.io https://ca-l2q-dev.wonderfulhill-26d0f535.uksouth.azurecontainerapps.io https://essmcp-coupa.wittysand-460bf1d9.eastus.azurecontainerapps.io; frame-src 'self' blob:; connect-src 'self' https://ca-retail-mcp-test.icysea-401f5140.uksouth.azurecontainerapps.io https://ca-l2q-dev.wonderfulhill-26d0f535.uksouth.azurecontainerapps.io https://essmcp-coupa.wittysand-460bf1d9.eastus.azurecontainerapps.io; font-src 'self' data:" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Scott Adams — Agents Global Black Belt" />
-  <meta property="og:description" content="Director, Agents Global Black Belt (GBB) at Microsoft. Agentic AI across Foundry, GitHub, Copilot Studio, and Agent 365." />
+  <meta property="og:title" content="Scott Adams — Agent-led business transformation" />
+  <meta property="og:description" content="Explore an autonomous business-process replay, working agent reference systems, interactive widgets, and live read-only MCP workflows." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://scott-adams.ai" />
-  <meta property="og:image" content="https://scott-adams.ai/assets/me/scott.jpg" />
+  <meta property="og:image" content="https://scott-adams.ai/assets/repos/ess-mcp/widget-team-dashboard.png" />
+  <meta property="og:image:alt" content="An enterprise agent dashboard from Scott Adams' ESS-MCP reference implementation" />
 
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/22813976?s=64&v=4" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>
+    (() => {
+      const param = new URLSearchParams(window.location.search).get("clawpilotTheme");
+      const theme =
+        param || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Scott Adams",
+    "url": "https://scott-adams.ai",
+    "image": "https://scott-adams.ai/assets/me/scott.jpg",
+    "jobTitle": "Agent Sales Global Black Belt",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Microsoft"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Edinburgh Napier University"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/adamsscott/",
+      "https://github.com/scadam"
+    ],
+    "knowsAbout": [
+      "Agentic AI",
+      "Business transformation",
+      "Model Context Protocol",
+      "Microsoft 365 Copilot",
+      "Microsoft Foundry",
+      "Copilot Studio",
+      "Agent 365"
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/22813976?s=64&amp;v=4" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <header class="site-header">
-    <nav class="nav">
-      <a href="#top" class="brand">SA<span class="dot">.</span></a>
+    <div class="nav">
+      <a href="#top" class="brand" aria-label="Scott Adams, home">
+        <span class="brand-name">Scott Adams</span>
+        <span class="brand-role">Agent Sales GBB</span>
+      </a>
+
       <div class="nav-right">
-        <div class="nav-links">
-          <a href="#about">About</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#lab">Transformation lab</a>
+          <a href="#widgets">Widgets</a>
+          <a href="#work">Case studies</a>
+          <a href="#method">Method</a>
           <a href="#viewpoints">Viewpoints</a>
-          <a href="#work">Work</a>
-          <a href="#focus">Focus</a>
-          <a href="#connect">Connect</a>
-        </div>
+        </nav>
         <span class="nav-ms" aria-label="Microsoft">
           <span class="ms-logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
           Microsoft
         </span>
       </div>
-    </nav>
+    </div>
   </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero">
+  <main id="main-content">
+    <section class="hero" id="top">
       <div class="hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Microsoft Corporation · Director, Agents Global Black Belt</p>
-          <h1>Building the<br />agentic enterprise.</h1>
-          <p class="lede">
-            I'm <strong>Scott Adams</strong> — Director, Agents Global Black Belt (GBB) at Microsoft.
-            I help the world's largest organisations turn agentic AI from demo into
-            production across <strong>Foundry</strong>, <strong>GitHub</strong>,
-            <strong>Copilot Studio</strong>, and <strong>Agent 365</strong>.
+          <p class="eyebrow">Agent Sales Global Black Belt · Microsoft</p>
+          <h1>Change the work.<br /><span>Then build the agent.</span></h1>
+          <p class="hero-lede">
+            I help enterprise leaders redesign how work gets done with agents — then build the
+            reference systems that make the transformation <strong>tangible, governable and real</strong>.
+          </p>
+          <p class="hero-support">
+            The repositories below are not product demos. They are working answers to business
+            transformation questions: how frontline teams act on context, how sales teams run a
+            portfolio, how employees cross system boundaries, and how digital workers earn trust.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#connect">Start a conversation</a>
-            <a class="btn btn-ghost" href="#work">See the work</a>
-            <a class="btn btn-ghost" href="https://www.linkedin.com/in/adamsscott/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-primary" href="#lab">Run a workflow</a>
+            <a class="btn btn-secondary" href="#work">Explore the builds</a>
           </div>
-          <div class="pills-block">
-            <span class="pills-label">Microsoft platforms I work across</span>
-            <ul class="pills">
-              <li>Microsoft Foundry</li>
-              <li>GitHub</li>
-              <li>Copilot Studio</li>
-              <li>Agent 365</li>
-              <li>MCP</li>
-            </ul>
-          </div>
+
+          <dl class="hero-stats" aria-label="Reference implementation totals">
+            <div><dt>5</dt><dd>Transformation builds</dd></div>
+            <div><dt>204</dt><dd>Tools in ESS-MCP</dd></div>
+            <div><dt>76</dt><dd>Interactive widgets</dd></div>
+            <div><dt>4</dt><dd>Guided workflows</dd></div>
+          </dl>
         </div>
+
         <figure class="hero-portrait">
-          <img src="assets/me/scott.jpg" alt="Scott Adams, Director, Agents Global Black Belt at Microsoft" />
-          <figcaption>Scott Adams · Microsoft</figcaption>
+          <img src="assets/me/scott.jpg" alt="Scott Adams, Agent Sales Global Black Belt at Microsoft" />
+          <figcaption class="portrait-note">
+            <span>My job in one line</span>
+            <strong>Make transformation tangible.</strong>
+            <p>Board narrative, operating model, architecture and working code.</p>
+          </figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="section-head"><h2>Who I am</h2></div>
-      <div class="about-grid">
-        <p>
-          I'm a <strong>Director and Global Black Belt at Microsoft</strong>, working with
-          enterprise and public-sector leaders across EMEA on the hardest part of AI: getting
-          agents out of the sandbox and into <strong>governed, production-grade operation</strong>.
-        </p>
-        <p>
-          My focus is <strong>agentic AI as digital labour</strong> — treating agents like a
-          workforce with real identity, guardrails and supervision, not a feature bolted onto a
-          chat box. I work end to end: the <strong>strategy and platform architecture</strong> a
-          board needs to hear, and the <strong>working reference implementations</strong> my team
-          and I build to prove it — the MCP servers, agents and Agent 365 “autopilots”
-          you'll find in the work below.
-        </p>
-        <p>
-          I'm proud that I <strong>started my career as an engineer</strong>, and I've never really
-          stopped. It's why I still ship code, not just slides — when I talk to your architects
-          about agents in production, it's engineer to engineer.
-        </p>
-        <p>
-          If you're moving from AI pilots to an <strong>agent estate you can actually run and
-          govern</strong> — especially in a regulated environment — that's the conversation I have
-          every day.
-        </p>
-        <p class="about-sign">— Scott Adams · Director, Agents Global Black Belt · Microsoft</p>
+    <section class="section lab-section" id="lab" aria-labelledby="lab-title">
+      <div class="section-intro-grid">
+        <div>
+          <p class="section-kicker">Transformation lab</p>
+          <h2 id="lab-title">Don't just read about it. Run it.</h2>
+        </div>
+        <div class="section-intro-copy">
+          <p>
+            Start with an event-triggered Digital Customer Success Manager: a source-aligned,
+            redacted replay of the real seven-stage engine with every external call and side effect
+            disabled. The other three scenarios connect to public demo MCP endpoints on Azure,
+            invoke fixed read-only tools, and host the actual Apps SDK widgets they return.
+          </p>
+          <p class="safety-copy">
+            Demonstration data only. The CSM operational dashboards remain identity-gated and are
+            never embedded here; live widgets run in isolated sandboxes and cannot execute follow-up tools.
+          </p>
+        </div>
+      </div>
+
+      <div class="lab-shell">
+        <div class="scenario-panel">
+          <div class="scenario-heading">
+            <span>Choose a transformation</span>
+            <span class="protocol-badge">1 SAFE SIM · 3 LIVE</span>
+          </div>
+
+          <div class="scenario-nav" role="tablist" aria-label="Transformation scenarios" aria-orientation="vertical">
+            <button class="scenario-button is-active" type="button" role="tab" aria-selected="true" aria-controls="lab-output" data-scenario="autonomous">
+              <span class="scenario-number">01</span>
+              <span class="scenario-copy">
+                <strong>Autonomous customer success</strong>
+                <small>csm-aiteammate</small>
+                <span>Business event → governed action → supervision</span>
+              </span>
+            </button>
+
+            <button class="scenario-button" type="button" role="tab" aria-selected="false" aria-controls="lab-output" data-scenario="retail" tabindex="-1">
+              <span class="scenario-number">02</span>
+              <span class="scenario-copy">
+                <strong>Frontline operations</strong>
+                <small>retail-mcp</small>
+                <span>Weather + travel + stock → shift action</span>
+              </span>
+            </button>
+
+            <button class="scenario-button" type="button" role="tab" aria-selected="false" aria-controls="lab-output" data-scenario="sales" tabindex="-1">
+              <span class="scenario-number">03</span>
+              <span class="scenario-copy">
+                <strong>Revenue operations</strong>
+                <small>L2Q</small>
+                <span>Salesforce portfolio → management brief</span>
+              </span>
+            </button>
+
+            <button class="scenario-button" type="button" role="tab" aria-selected="false" aria-controls="lab-output" data-scenario="procurement" tabindex="-1">
+              <span class="scenario-number">04</span>
+              <span class="scenario-copy">
+                <strong>Procurement operations</strong>
+                <small>ess-mcp · Coupa</small>
+                <span>IT demand + supply risk → intervention queue</span>
+              </span>
+            </button>
+          </div>
+
+        </div>
+
+        <div class="lab-console">
+          <div class="lab-toolbar">
+            <div class="lab-status" id="lab-status" data-state="ready">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span id="lab-status-text">Ready to replay a business event</span>
+            </div>
+            <span class="lab-host" id="lab-endpoint">local · redacted · side-effect free</span>
+          </div>
+
+          <div class="lab-output" id="lab-output" role="tabpanel" aria-live="polite" aria-busy="false"></div>
+
+          <div class="lab-controls">
+            <button class="btn btn-primary run-button" id="run-scenario" type="button">Run autonomous business event</button>
+            <details class="lab-details">
+              <summary>See what runs</summary>
+              <p id="lab-call-list">event → Agent ID → seven-stage engine → deterministic route → supervised outcome</p>
+              <p id="lab-call-explainer">The replay follows the repository's real stages and rule IDs using synthetic inputs. It makes no external or API requests, writes no data and cannot deliver customer outreach.</p>
+            </details>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- VIEWPOINTS / ARTICLES -->
-    <section id="viewpoints" class="section">
+    <section class="section widget-section" id="widgets" aria-labelledby="widgets-title">
       <div class="section-head">
-        <h2>Viewpoints</h2>
-        <a class="section-link" href="https://www.linkedin.com/in/adamsscott/recent-activity/articles/" target="_blank" rel="noopener">All on LinkedIn →</a>
+        <div>
+          <p class="section-kicker">The interaction surface</p>
+          <h2 id="widgets-title">Widgets turn answers into work.</h2>
+        </div>
+        <p class="section-side-copy">
+          Rich MCP Apps let people inspect, navigate and act without forcing every task through a text transcript.
+        </p>
       </div>
-      <p class="lede" style="margin-bottom:40px">
-        Where I share how I see agentic AI unfolding — and the projects that put the ideas into practice.
-      </p>
+
+      <div class="widget-filters" role="group" aria-label="Filter widget gallery">
+        <button class="filter-button is-active" type="button" data-widget-filter="all" aria-pressed="true">All</button>
+        <button class="filter-button" type="button" data-widget-filter="frontline" aria-pressed="false">Frontline</button>
+        <button class="filter-button" type="button" data-widget-filter="sales" aria-pressed="false">Sales</button>
+        <button class="filter-button" type="button" data-widget-filter="people" aria-pressed="false">People</button>
+        <button class="filter-button" type="button" data-widget-filter="procurement" aria-pressed="false">Procurement</button>
+        <button class="filter-button" type="button" data-widget-filter="operations" aria-pressed="false">Digital worker</button>
+      </div>
+
+      <div class="widget-gallery">
+        <button class="widget-tile widget-tile-wide" type="button" data-widget-category="frontline" data-widget-title="Frontline daily dashboard" data-widget-description="A shift manager sees revenue, transactions and product mix in the same surface the agent uses to recommend the next action." data-widget-src="assets/repos/retail-mcp/dashboard.png">
+          <img src="assets/repos/retail-mcp/dashboard.png" alt="Retail daily sales dashboard widget" loading="lazy" />
+          <span class="widget-caption"><strong>Daily operations</strong><small>retail-mcp · Frontline</small></span>
+        </button>
+
+        <button class="widget-tile" type="button" data-widget-category="sales" data-widget-title="Sales pipeline" data-widget-description="A stage-by-stage view of pipeline value and volume, returned by the same MCP server that supports chat and Cowork." data-widget-src="assets/repos/L2Q/pipeline.png">
+          <img src="assets/repos/L2Q/pipeline.png" alt="L2Q sales pipeline widget" loading="lazy" />
+          <span class="widget-caption"><strong>Pipeline</strong><small>L2Q · Revenue</small></span>
+        </button>
+
+        <button class="widget-tile" type="button" data-widget-category="people" data-widget-title="People leader dashboard" data-widget-description="A manager can move from team overview to goals, learning and actions without navigating multiple HR screens." data-widget-src="assets/repos/ess-mcp/widget-team-dashboard.png">
+          <img src="assets/repos/ess-mcp/widget-team-dashboard.png" alt="Workday people leader dashboard widget" loading="lazy" />
+          <span class="widget-caption"><strong>People leader</strong><small>ESS-MCP · Workday UI</small></span>
+        </button>
+
+        <button class="widget-tile" type="button" data-widget-category="frontline" data-widget-title="Stock health" data-widget-description="Critical lines are visible at a glance and become context for the agent's replenishment and staffing recommendations." data-widget-src="assets/repos/retail-mcp/stock.png">
+          <img src="assets/repos/retail-mcp/stock.png" alt="Retail stock health widget" loading="lazy" />
+          <span class="widget-caption"><strong>Stock health</strong><small>retail-mcp · Frontline</small></span>
+        </button>
+
+        <button class="widget-tile widget-tile-wide" type="button" data-widget-category="sales" data-widget-title="Account 360" data-widget-description="CRM, opportunity and communication context are brought together for account planning and meeting preparation." data-widget-src="assets/repos/L2Q/account_360.png">
+          <img src="assets/repos/L2Q/account_360.png" alt="L2Q account 360 widget" loading="lazy" />
+          <span class="widget-caption"><strong>Account 360</strong><small>L2Q · Revenue</small></span>
+        </button>
+
+        <button class="widget-tile" type="button" data-widget-category="people" data-widget-title="Organisational context" data-widget-description="Interactive organisational context gives the agent and manager a shared view of reporting relationships." data-widget-src="assets/repos/ess-mcp/widget-org-chart.png">
+          <img src="assets/repos/ess-mcp/widget-org-chart.png" alt="ESS-MCP organisation chart widget" loading="lazy" />
+          <span class="widget-caption"><strong>Organisation</strong><small>ESS-MCP · People</small></span>
+        </button>
+
+        <button class="widget-tile" type="button" data-widget-category="procurement" data-widget-title="Purchase order status" data-widget-description="A procurement status view makes approvals, fulfilment and exceptions legible inside the agent conversation." data-widget-src="assets/repos/ess-mcp/widget-ariba-po-status.png">
+          <img src="assets/repos/ess-mcp/widget-ariba-po-status.png" alt="SAP Ariba purchase order status widget" loading="lazy" />
+          <span class="widget-caption"><strong>Purchase order</strong><small>ESS-MCP · Procurement</small></span>
+        </button>
+
+        <button class="widget-tile" type="button" data-widget-category="people" data-widget-title="Employee profile" data-widget-description="A unified employee profile demonstrates how the same MCP interaction pattern can span Microsoft and SAP estates." data-widget-src="assets/repos/ess-mcp/widget-sf-employee-profile.png">
+          <img src="assets/repos/ess-mcp/widget-sf-employee-profile.png" alt="SAP SuccessFactors employee profile widget" loading="lazy" />
+          <span class="widget-caption"><strong>Employee profile</strong><small>ESS-MCP · SAP</small></span>
+        </button>
+
+        <button class="widget-tile widget-tile-wide" type="button" data-widget-category="operations" data-widget-title="Digital worker activity and billing" data-widget-description="Supervisors can see the work, decisions, escalations and billing footprint of an autonomous digital worker." data-widget-src="assets/repos/digital-lawyer/activity-dashboard.png">
+          <img src="assets/repos/digital-lawyer/activity-dashboard.png" alt="Digital Lawyer activity and billing dashboard" loading="lazy" />
+          <span class="widget-caption"><strong>Workforce supervision</strong><small>digital-lawyer · Agent 365</small></span>
+        </button>
+      </div>
+
+      <dialog class="widget-dialog" id="widget-dialog" aria-labelledby="widget-dialog-title">
+        <div class="dialog-toolbar">
+          <div>
+            <span class="dialog-kicker">Interactive surface</span>
+            <h3 id="widget-dialog-title">Widget preview</h3>
+          </div>
+          <button class="dialog-close" id="widget-dialog-close" type="button" aria-label="Close widget preview">×</button>
+        </div>
+        <img id="widget-dialog-image" src="assets/repos/retail-mcp/dashboard.png" alt="" />
+        <p id="widget-dialog-description"></p>
+      </dialog>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="section-intro-grid">
+        <div>
+          <p class="section-kicker">Transformation case studies</p>
+          <h2 id="work-title">The repositories are the proof.</h2>
+        </div>
+        <div class="section-intro-copy">
+          <p>
+            Each build starts with a different operating problem. The technology matters because it
+            makes the new way of working possible — not because the architecture diagram is the outcome.
+          </p>
+        </div>
+      </div>
+
+      <div class="showcase-grid">
+        <article class="showcase-card showcase-featured">
+          <div class="showcase-media autonomous-showcase-media">
+            <span class="live-label">Flagship transformation build</span>
+            <div class="autonomous-case-visual" aria-label="Event-triggered customer success journey preview">
+              <div class="case-visual-head">
+                <span><i aria-hidden="true"></i> Product signal received</span>
+                <strong>Autonomous</strong>
+              </div>
+              <div class="case-visual-stages" aria-hidden="true">
+                <span>Signal</span><span>Context</span><span>Decide</span><span>Build</span><span>Review</span><span>Deliver</span><span>Learn</span>
+              </div>
+              <div class="case-visual-decision">
+                <small>Deterministic decision</small>
+                <strong>Human judgement required</strong>
+                <span>Strategic account · complex topic · high influence</span>
+              </div>
+              <div class="case-visual-surfaces">
+                <span><small>Manager</small><strong>1 review item</strong></span>
+                <span><small>Sponsor</small><strong>Fleet visible</strong></span>
+                <span><small>Governance</small><strong>Evidence captured</strong></span>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-copy">
+            <div class="showcase-title-row">
+              <div>
+                <p class="showcase-eyebrow">01 · Autonomous customer success</p>
+                <h3>A customer signal becomes governed work — without waiting for a prompt.</h3>
+              </div>
+              <span class="repo-slug">csm-aiteammate</span>
+            </div>
+            <p class="case-outcome">
+              A Digital Customer Success Manager starts when a usage, release or renewal event lands.
+              It acts with its own Agent 365 identity, builds context, applies auditable routing rules,
+              drafts from approved content and either handles the work or asks the human CSM for judgement.
+            </p>
+            <dl class="evidence-grid">
+              <div><dt>7</dt><dd>Stage autonomous journey</dd></div>
+              <div><dt>16</dt><dd>Business MCP tools</dd></div>
+              <div><dt>3</dt><dd>Supervision surfaces</dd></div>
+              <div><dt>0</dt><dd>Human turns to start</dd></div>
+            </dl>
+            <p class="case-pattern"><strong>Transformation pattern:</strong> replace periodic queue management with continuous, event-driven customer success — while preserving manager judgement and sponsor control.</p>
+            <div class="case-actions">
+              <a class="text-link" href="repos/csm-aiteammate.html">Open the case study →</a>
+              <a class="text-link muted-link" href="https://github.com/scadam/csm-aiteammate" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="text-link muted-link" href="?scenario=autonomous#lab">Run the safe replay ↑</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="showcase-card showcase-featured">
+          <div class="showcase-media">
+            <img src="assets/repos/ess-mcp/widget-team-dashboard.png" alt="ESS-MCP people leader dashboard" loading="lazy" />
+            <span class="live-label">Enterprise reference system</span>
+          </div>
+          <div class="showcase-copy">
+            <div class="showcase-title-row">
+              <div>
+                <p class="showcase-eyebrow">02 · Enterprise services</p>
+                <h3>One governed tool layer. Four agent surfaces.</h3>
+              </div>
+              <span class="repo-slug">ess-mcp</span>
+            </div>
+            <p class="case-outcome">
+              Employees and managers stop navigating system boundaries. The same enterprise toolset
+              powers Copilot chat, Cowork deliverables, rich MCP Apps and an autonomous Agent 365 teammate.
+            </p>
+            <dl class="evidence-grid">
+              <div><dt>7</dt><dd>Enterprise MCP servers</dd></div>
+              <div><dt>204</dt><dd>Actionable tools</dd></div>
+              <div><dt>76</dt><dd>Interactive widgets</dd></div>
+              <div><dt>4</dt><dd>Agent shapes</dd></div>
+            </dl>
+            <p class="case-pattern"><strong>Transformation pattern:</strong> replace fragmented self-service journeys with one governed agent capability layer.</p>
+            <div class="case-actions">
+              <a class="text-link" href="repos/ess-mcp.html">Open the case study →</a>
+              <a class="text-link muted-link" href="https://github.com/scadam/ess-mcp" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="text-link muted-link" href="?scenario=procurement#lab">Try the mocked Coupa flow ↑</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="showcase-card">
+          <div class="showcase-media">
+            <img src="assets/repos/retail-mcp/dashboard.png" alt="Frontline retail operations dashboard" loading="lazy" />
+            <span class="live-label">Live workflow available</span>
+          </div>
+          <div class="showcase-copy">
+            <div class="showcase-title-row">
+              <div>
+                <p class="showcase-eyebrow">03 · Frontline operations</p>
+                <h3>A shift manager gets a thinking partner.</h3>
+              </div>
+              <span class="repo-slug">retail-mcp</span>
+            </div>
+            <p class="case-outcome">
+              Weather, travel, rota, stock, training, policy and customer signals become one continuous
+              operational conversation — designed for people who do not sit at a desk.
+            </p>
+            <dl class="evidence-grid compact-evidence">
+              <div><dt>19</dt><dd>Tool modules</dd></div>
+              <div><dt>17</dt><dd>Widgets</dd></div>
+              <div><dt>15</dt><dd>Demo scenes</dd></div>
+            </dl>
+            <p class="case-pattern"><strong>Transformation pattern:</strong> move from dashboards that report work to an agent that helps run the shift.</p>
+            <div class="case-actions">
+              <a class="text-link" href="repos/retail-mcp.html">Open the case study →</a>
+              <a class="text-link muted-link" href="https://github.com/scadam/retail-mcp" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="text-link muted-link" href="?scenario=retail#lab">Run it live ↑</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="showcase-card">
+          <div class="showcase-media">
+            <img src="assets/repos/L2Q/pipeline.png" alt="L2Q lead-to-quote pipeline widget" loading="lazy" />
+            <span class="live-label">Live workflow available</span>
+          </div>
+          <div class="showcase-copy">
+            <div class="showcase-title-row">
+              <div>
+                <p class="showcase-eyebrow">04 · Revenue operations</p>
+                <h3>Salesforce becomes work, not a destination.</h3>
+              </div>
+              <span class="repo-slug">L2Q</span>
+            </div>
+            <p class="case-outcome">
+              A regulated fintech sales team moves from CRM lookups to account briefs, meeting preparation,
+              proposals, pipeline packs and follow-up work across Copilot and Cowork.
+            </p>
+            <dl class="evidence-grid compact-evidence">
+              <div><dt>54</dt><dd>Live MCP tools</dd></div>
+              <div><dt>8</dt><dd>Branded widgets</dd></div>
+              <div><dt>2</dt><dd>Agent surfaces</dd></div>
+            </dl>
+            <p class="case-pattern"><strong>Transformation pattern:</strong> use one MCP layer for fast transactional chat and deeper artefact-producing work.</p>
+            <div class="case-actions">
+              <a class="text-link" href="repos/L2Q.html">Open the case study →</a>
+              <a class="text-link muted-link" href="https://github.com/scadam/L2Q" target="_blank" rel="noopener">GitHub ↗</a>
+              <a class="text-link muted-link" href="?scenario=sales#lab">Run it live ↑</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="showcase-card showcase-featured showcase-dark">
+          <div class="showcase-media">
+            <img src="assets/repos/digital-lawyer/activity-dashboard.png" alt="Digital Lawyer activity and billing dashboard" loading="lazy" />
+            <span class="live-label">Governed digital worker</span>
+          </div>
+          <div class="showcase-copy">
+            <div class="showcase-title-row">
+              <div>
+                <p class="showcase-eyebrow">05 · Regulated digital labour</p>
+                <h3>An AI colleague with identity, authority and supervision.</h3>
+              </div>
+              <span class="repo-slug">digital-lawyer</span>
+            </div>
+            <p class="case-outcome">
+              Alex Morgan reviews contracts clause by clause, marks up Word documents, records risk decisions,
+              escalates beyond delegated authority and bills time — with an Entra-backed identity and audit trail.
+            </p>
+            <dl class="evidence-grid">
+              <div><dt>13</dt><dd>Step review workflow</dd></div>
+              <div><dt>18</dt><dd>Step email workflow</dd></div>
+              <div><dt>5</dt><dd>Domain MCP servers</dd></div>
+              <div><dt>1</dt><dd>Named agent identity</dd></div>
+            </dl>
+            <p class="case-pattern"><strong>Transformation pattern:</strong> manage capable agents as members of the workforce, not anonymous automations.</p>
+            <div class="case-actions">
+              <a class="text-link" href="repos/digital-lawyer.html">Open the case study →</a>
+              <a class="text-link muted-link" href="https://github.com/scadam/digital-lawyer" target="_blank" rel="noopener">GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section method-section" id="method" aria-labelledby="method-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">The transformation method</p>
+          <h2 id="method-title">Start with the work, not the agent.</h2>
+        </div>
+        <p class="section-side-copy">The common pattern behind every repository.</p>
+      </div>
+
+      <div class="method-grid">
+        <article class="method-step">
+          <span class="method-number">01</span>
+          <h3>Reframe the operating model</h3>
+          <p>Choose a journey where context, judgement and action cross people and systems. Define what changes for the worker, manager and customer.</p>
+          <span class="method-output">Output · transformation thesis</span>
+        </article>
+        <article class="method-step">
+          <span class="method-number">02</span>
+          <h3>Prove the system of work</h3>
+          <p>Build the governed MCP tools, interaction surfaces and reference agent against realistic systems and data. Make the future visible and runnable.</p>
+          <span class="method-output">Output · working reference build</span>
+        </article>
+        <article class="method-step">
+          <span class="method-number">03</span>
+          <h3>Design for a workforce</h3>
+          <p>Add identity, permission, human approval, observability and lifecycle. A useful agent must survive security review and daily operation.</p>
+          <span class="method-output">Output · scale and governance model</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section career-section" id="about" aria-labelledby="about-title">
+      <div class="career-grid">
+        <div>
+          <p class="section-kicker">Why this lens</p>
+          <h2 id="about-title">Engineering depth. Product judgement. Enterprise change.</h2>
+        </div>
+        <div class="career-copy">
+          <p>
+            I have spent three decades on the same underlying problem: turning emerging enterprise
+            technology into an operating change people can trust. That path has taken me from software
+            engineering and BI product leadership to founding a company, leading technical sales teams,
+            and now helping enterprise and public-sector leaders transform work with agents at Microsoft.
+          </p>
+          <p>
+            It is why I work at both altitudes: the board-level narrative that creates permission to change,
+            and the architecture and code that prove the new model can actually run.
+          </p>
+          <div class="credential-list" aria-label="Selected credentials">
+            <span>1st-class BEng · Software Engineering</span>
+            <span>Microsoft Press co-author</span>
+            <span>US patent · data architecture</span>
+            <span>Microsoft Gold Club · 2019 &amp; 2025</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="viewpoints" aria-labelledby="viewpoints-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Viewpoints</p>
+          <h2 id="viewpoints-title">The ideas behind the builds.</h2>
+        </div>
+        <a class="section-link" href="https://www.linkedin.com/in/adamsscott/recent-activity/articles/" target="_blank" rel="noopener">All articles on LinkedIn ↗</a>
+      </div>
 
       <div class="article-list">
         <a class="article" href="articles/article-1.html">
-          <div class="article-thumb" style="background-image:url('assets/cover-digital-lawyer.svg')"></div>
+          <div class="article-thumb"><img src="assets/cover-digital-lawyer.svg" alt="Digital labour article cover" loading="lazy" /></div>
           <div class="article-text">
-            <span class="article-meta">Feb 2026 · Viewpoint</span>
+            <span class="article-meta">Feb 2026 · Identity and governance</span>
             <h3>Digital labour, made real</h3>
-            <p>Why some agents need an Agent 365 license — the shift from AI as a feature to AI as labour.</p>
+            <p>Why capable agents need identity, delegated authority, supervision and a place in the operating model.</p>
           </div>
           <span class="article-cta">Read →</span>
         </a>
         <a class="article" href="articles/article-2.html">
-          <div class="article-thumb" style="background-image:url('assets/article-frontier/platform-diagram.jpg')"></div>
+          <div class="article-thumb"><img src="assets/article-frontier/platform-diagram.jpg" alt="Microsoft Frontier Agent Platform diagram" loading="lazy" /></div>
           <div class="article-text">
-            <span class="article-meta">Jan 2026 · Viewpoint</span>
+            <span class="article-meta">Jan 2026 · Enterprise platform</span>
             <h3>Microsoft Frontier Agent Platform</h3>
-            <p>What a real enterprise agent platform looks like when you treat agents like a workforce, not a feature.</p>
+            <p>The control plane, tools and open protocols required when an organisation moves from assistants to an agent workforce.</p>
           </div>
           <span class="article-cta">Read →</span>
         </a>
         <a class="article" href="articles/cowork.html">
-          <div class="article-thumb" style="background-image:url('assets/cover-l2q.svg')"></div>
+          <div class="article-thumb"><img src="assets/cover-l2q.svg" alt="Chat and Cowork article cover" loading="lazy" /></div>
           <div class="article-text">
-            <span class="article-meta">2026 · Viewpoint</span>
+            <span class="article-meta">2026 · Interaction model</span>
             <h3>Chat, Cowork, and the plugins that do the work</h3>
-            <p>When to chat and when to Cowork — and the open MCP plugins that turn live business data into finished deliverables.</p>
+            <p>One MCP layer can power quick transactions and deep work that produces finished dashboards, decks and reports.</p>
           </div>
           <span class="article-cta">Read →</span>
         </a>
       </div>
-
-      <div class="posts-strip">
-        <span class="posts-label">Recent posts</span>
-        <a class="post-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7466249628489764864/" target="_blank" rel="noopener">5 plugins for Copilot Cowork ↗</a>
-        <a class="post-link" href="https://www.linkedin.com/feed/update/urn:li:activity:7468298067860180993/" target="_blank" rel="noopener">When to Chat vs Cowork with Salesforce ↗</a>
-        <a class="post-link" href="https://www.linkedin.com/pulse/digital-labour-made-real-why-some-agents-need-agent-365-scott-adams-vcbqf" target="_blank" rel="noopener">Digital labour, made real ↗</a>
-        <a class="post-link post-more" href="https://www.linkedin.com/in/adamsscott/recent-activity/all/" target="_blank" rel="noopener">See all activity on LinkedIn →</a>
-      </div>
     </section>
 
-    <!-- PROOF -->
-    <section id="proof" class="section">
-      <div class="section-head"><h2>What colleagues say</h2></div>
-      <p class="lede" style="margin-bottom:40px">
-        The response to my viewpoints from peers inside Microsoft — the people who see this work up close.
+    <section class="section connect" id="connect" aria-labelledby="connect-title">
+      <p class="section-kicker">A useful first conversation</p>
+      <h2 id="connect-title">Where could an agent change the work — not just the interface?</h2>
+      <p class="connect-lede">
+        If your organisation has plenty of AI ideas but is still wrestling with the move from pilot to
+        governed operation, that is the problem I work on every day. Bring the business process, the
+        system constraints and the hard questions.
       </p>
-      <div class="proof-stats">
-        <div class="proof-stat"><span class="n">349+</span><span class="l">Reactions · Frontier platform</span></div>
-        <div class="proof-stat"><span class="n">55</span><span class="l">Reposts by peers</span></div>
-        <div class="proof-stat"><span class="n">37</span><span class="l">Comments &amp; discussions</span></div>
-        <div class="proof-stat"><span class="n">7</span><span class="l">Reference builds shipped</span></div>
-      </div>
-      <div class="quotes">
-        <figure class="quote">
-          <p>“This is AI gold on so many levels. Thank you for sharing this.”</p>
-          <cite><strong>David Favero</strong> · Enterprise Life Sciences AI — Microsoft</cite>
-        </figure>
-        <figure class="quote">
-          <p>“A really great read and clearly articulated. I'll share it with my network as I know this is top of mind.”</p>
-          <cite><strong>Heather Jones</strong> · Customer Success Manager — Microsoft</cite>
-        </figure>
-      </div>
-      <p class="proof-note">
-        Verbatim public responses from Microsoft colleagues to <a href="articles/article-2.html">Microsoft Frontier Agent Platform</a>.
-        <a href="https://www.linkedin.com/in/adamsscott/recent-activity/all/" target="_blank" rel="noopener">See the conversation on LinkedIn →</a>
-      </p>
-    </section>
-
-    <!-- WORK / REPOS -->
-    <section id="work" class="section">
-      <div class="section-head">
-        <h2>Selected Work</h2>
-        <a class="section-link" href="https://github.com/scadam?tab=repositories" target="_blank" rel="noopener">All repositories →</a>
-      </div>
-      <p class="lede" style="margin-bottom:40px">
-        Real, working code — reference agents and MCP servers that show how these ideas hold up in production.
-      </p>
-
-      <div class="work-grid" id="repo-grid">
-        <a class="repo" href="repos/ess-mcp.html">
-          <div class="repo-cover" style="background-image:url('assets/repos/ess-mcp/widget-team-dashboard.png')"></div>
-          <div class="repo-body">
-            <div class="repo-head"><h3>ess-mcp</h3><span class="arrow">→</span></div>
-            <p>Enterprise Self-Service, end-to-end on MCP. 7 servers, 204 tools and 76 widgets across Workday, ServiceNow, Salesforce, Jira and SAP — surfaced through Copilot, Cowork and an autonomous Agent 365 teammate.</p>
-            <div class="tags"><span class="tag">MCP Server</span><span class="tag">Agent 365</span><span class="tag">HR &amp; IT</span></div>
-          </div>
-        </a>
-
-        <a class="repo" href="repos/L2Q.html">
-          <div class="repo-cover" style="background-image:url('assets/repos/L2Q/pipeline.png')"></div>
-          <div class="repo-body">
-            <div class="repo-head"><h3>L2Q</h3><span class="arrow">→</span></div>
-            <p>Lead-to-Quote for fintech sales. An MCP server wiring live Salesforce into both a Copilot declarative agent and a Cowork plugin — 58 tools, 8 branded widgets, built for MiFID II / GDPR / FCA deals.</p>
-            <div class="tags"><span class="tag">MCP Server</span><span class="tag">Salesforce</span><span class="tag">Copilot Studio</span></div>
-          </div>
-        </a>
-
-        <a class="repo" href="repos/retail-mcp.html">
-          <div class="repo-cover" style="background-image:url('assets/repos/retail-mcp/dashboard.png')"></div>
-          <div class="repo-body">
-            <div class="repo-head"><h3>retail-mcp</h3><span class="arrow">→</span></div>
-            <p>A Costa Coffee frontline AI agent — not just a mobile app. Weather, travel, stock, rota, training and social, plus photo understanding and SharePoint, chained in one conversation across 17 interactive widgets.</p>
-            <div class="tags"><span class="tag">MCP Server</span><span class="tag">Retail</span><span class="tag">Front-line</span></div>
-          </div>
-        </a>
-
-        <a class="repo" href="repos/digital-lawyer.html">
-          <div class="repo-cover" style="background-image:url('assets/repos/digital-lawyer/activity-dashboard.png')"></div>
-          <div class="repo-body">
-            <div class="repo-head"><h3>digital-lawyer</h3><span class="arrow">→</span></div>
-            <p>Alex Morgan, an AI Associate Solicitor with an Entra-backed agent identity. Reviews supplier agreements clause-by-clause, marks up Word docs over email, logs risk decisions and bills its time — governed by Agent 365.</p>
-            <div class="tags"><span class="tag">Agent</span><span class="tag">Agent 365</span><span class="tag">Legal</span></div>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- FOCUS -->
-    <section id="focus" class="section">
-      <div class="section-head"><h2>What I Focus On</h2></div>
-      <div class="focus-grid">
-        <div class="focus-item">
-          <span class="focus-num">01</span>
-          <h3>Foundry</h3>
-          <p>Building, evaluating and operating agents on Microsoft Foundry — from model choice to production.</p>
-        </div>
-        <div class="focus-item">
-          <span class="focus-num">02</span>
-          <h3>GitHub</h3>
-          <p>Agentic developer workflows and the open building blocks — MCP servers, tools and automation.</p>
-        </div>
-        <div class="focus-item">
-          <span class="focus-num">03</span>
-          <h3>Copilot Studio</h3>
-          <p>Low-code agent design that lets business teams orchestrate real work across their systems.</p>
-        </div>
-        <div class="focus-item">
-          <span class="focus-num">04</span>
-          <h3>Agent 365</h3>
-          <p>Managing, governing and scaling a fleet of agents alongside the people they work with.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW I HELP -->
-    <section id="help" class="section">
-      <div class="section-head"><h2>How I help enterprises</h2></div>
-      <p class="lede" style="margin-bottom:40px">
-        Most organisations don't have an idea problem — they have a "demo to production" problem.
-        Here's where I make the difference.
-      </p>
-      <div class="help-grid">
-        <div class="help-item">
-          <span class="help-num">01</span>
-          <h3>Set the agent strategy</h3>
-          <p>A clear, board-ready view of your agent estate — where agents get built, which builder personas you enable, and the platform architecture that keeps it all governed as you scale.</p>
-        </div>
-        <div class="help-item">
-          <span class="help-num">02</span>
-          <h3>Prove it with working code</h3>
-          <p>Not slideware. Reference agents and MCP servers wired into your real systems — Salesforce, ServiceNow, Workday, SAP — so stakeholders see a governed agent doing real work, fast.</p>
-        </div>
-        <div class="help-item">
-          <span class="help-num">03</span>
-          <h3>Make it safe to scale</h3>
-          <p>Identity, guardrails, observability and lifecycle for every agent through Agent 365 — so what you ship survives audit, security review and the realities of a regulated enterprise.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONNECT -->
-    <section id="connect" class="section connect">
-      <h2>Let's build the agentic enterprise.</h2>
-      <p class="connect-lede">Bringing agentic AI to your organisation and want a straight, technical conversation — no hype? That's exactly what I do. Reach out and let's talk about where you are and where you want to get to.</p>
       <div class="connect-links">
-        <a href="https://www.linkedin.com/in/adamsscott/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-        <a href="https://github.com/scadam" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/adamsscott/" target="_blank" rel="noopener">Start a conversation on LinkedIn</a>
+        <a class="btn btn-secondary" href="https://github.com/scadam" target="_blank" rel="noopener">Explore all GitHub repositories</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <span>© <span id="year"></span> Scott Adams · Director, Agents Global Black Belt, Microsoft</span>
+    <span>© <span id="year"></span> Scott Adams</span>
+    <span>Agent Sales Global Black Belt · Microsoft</span>
     <span class="footer-note">Personal site · views my own, not Microsoft's</span>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="lab.js" defer></script>
 </body>
 </html>
